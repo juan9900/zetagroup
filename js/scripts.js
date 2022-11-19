@@ -8,21 +8,29 @@ const projects2 = document.querySelectorAll('.project');
 
 let prevProject = projects.length - 1;
 const disableProjects = (current) => {
-    console.log(current);
-    var zindex = 999;
-    var prevI = 999;
+    console.log('current',current,'----------------------------------');
+    var zindex = 9999;
+    console.log('prevProject',prevProject);
     $('.project').each(function(i,obj){
         console.log('index',i);
-        console.log('prevI',prevI);
+        
+        console.log('currentIndex',zindex);
         $(this).removeClass('project-active');
-        $(this).css('z-index',`${zindex}`);
-        if(prevProject > i){
+        if(i != current){
+            $(this).css('z-index',`${zindex}`);
+        }
+        console.log('length',Math.round(projects.length/2))
+        
+        if(current >= Math.round((projects.length/2))){
+            console.log('mayor');
             zindex+=1;
         }else{
             zindex-=1;
         }
-        prevProject = current;
+        
+
     })
+    prevProject = current;
 }
 
 const positionProjects = () => {
@@ -32,7 +40,6 @@ const positionProjects = () => {
     var zindex = 990;
     $('.project').each(function(i,obj){
         console.log(this);
-        
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
         $(this).on('click', () => {
             current = i;
