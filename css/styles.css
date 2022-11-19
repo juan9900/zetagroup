@@ -41,7 +41,7 @@ body {
 .hamburger-container {
   position: absolute;
   z-index: 99999;
-  width: 60px;
+  width: 50px;
   left: 5%;
   top: 2%;
   cursor: pointer;
