@@ -151,7 +151,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: 99999;
-  width: 70%;
+  width: 75%;
 }
 
 .project {
@@ -160,6 +160,7 @@ body {
   cursor: pointer;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+  transition: filter 0.8s linear;
 }
 
 .project.project-active {
@@ -183,4 +184,5 @@ body {
 
 .project-description p {
   color: var(--grayText);
+  font-size: 1.2em;
 }
