@@ -1,0 +1,186 @@
+:root {
+  --primary: #3e3e3e;
+  --primaryLight: #77777b;
+  --secondary: #e1e3db;
+  --grayText: #dedede;
+  --projectDescription: #3e3e3ec9;
+}
+@font-face {
+  font-family: "Typo-Hoop-Hairline"; /*a name to be used later*/
+  src: url("../assets/fonts/TYPO\ HOOP_HAIRLINE\ DEMO.OTF"); /*URL to font*/
+}
+@font-face {
+  font-family: "Typo-Hoop-Light"; /*a name to be used later*/
+  src: url("../assets/fonts/TYPO\ HOOP_LIGHT\ DEMO.OTF"); /*URL to font*/
+}
+
+@font-face {
+  font-family: "Akhandsoft-Semilight";
+  src: url("../assets/fonts/INDIAN\ TYPE\ FOUNDRY\ -\ AKHANDSOFT-SEMILIGHT.OTF");
+}
+
+body {
+  font-family: Akhandsoft-Semilight;
+}
+
+.section-title {
+  font-size: 5.8rem;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  letter-spacing: 15px;
+}
+
+.section-title.title-left {
+  margin-left: 5%;
+}
+/* WELCOME */
+.carousel-inner {
+  height: 100vh;
+}
+
+.hamburger-container {
+  position: absolute;
+  z-index: 99999;
+  width: 60px;
+  left: 5%;
+  top: 2%;
+  cursor: pointer;
+}
+
+.hamburger-container span {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff !important;
+  margin: 0.8rem 0;
+  transition: 0.4s;
+}
+
+.language-selector-container {
+  z-index: 99999;
+  position: absolute;
+  color: #fff;
+  right: 5%;
+  top: 2%;
+}
+
+.language-selector-container p {
+  font-size: 2rem;
+  margin: 0 0.7rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  line-height: 2.2rem;
+}
+
+.language-selector-container p.active {
+  border-bottom-color: #fff;
+}
+
+.section-welcome {
+  position: relative;
+}
+
+.welcome-title-container {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-logo {
+  max-width: 20rem;
+}
+
+.welcome-title {
+  /* TODO: CAMBIAR EL COLOR DEL TEXTO */
+  color: var(--grayText);
+  font-family: "Typo-Hoop-Hairline";
+  letter-spacing: 10px;
+  margin-bottom: 2rem;
+}
+.welcome-title-container h4,
+.welcome-title-container span {
+  font-family: "Akhandsoft-Semilight";
+  color: var(--grayText);
+  letter-spacing: 6px;
+}
+
+.welcome-title-container span {
+  margin: 0 1rem;
+}
+
+/* SECTION ABOUT */
+.section-about {
+  height: auto;
+  padding: 5rem 0 5rem 0;
+}
+
+.section-title h2 {
+  flex-grow: 0;
+}
+
+.about-text-container {
+}
+
+.about-text-container img {
+  max-width: 50%;
+}
+
+.about-text {
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1.3em;
+  padding: 5rem 2rem;
+  width: 30%;
+}
+
+/* SECTION PROJECTS */
+.section-projects {
+  margin-top: 10rem;
+}
+
+.section-projects img {
+  width: 100%;
+  right: 0;
+  height: 80%;
+}
+
+.projects-container {
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  width: 70%;
+}
+
+.project {
+  position: absolute;
+  width: 80%;
+  cursor: pointer;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.project.project-active {
+  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+}
+
+.project-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--projectDescription);
+  padding: 1rem 3rem;
+}
+
+.project-description h3 {
+  color: #fff;
+  font-size: 5rem;
+}
+
+.project-description p {
+  color: var(--grayText);
+}
