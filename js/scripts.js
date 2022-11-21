@@ -41,11 +41,14 @@ const positionProjects = () => {
     $('.project').each(function(i,obj){
         console.log(this);
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
-        $(this).on('click', () => {
+        $(this).on('mouseover', () => {
             current = i;
             disableProjects(current);
             $(this).addClass('project-active');
             $(this).css('z-index','99999');
+        })
+        $(this).on('mouseleave', () => {
+            $(this).removeClass('project-active');
         })
         right-=10;
         zindex += 1;

@@ -25,9 +25,14 @@ body {
 
 .section-title {
   font-size: 5.8rem;
-  writing-mode: sideways-lr;
+  writing-mode: vertical-lr;
   text-orientation: mixed;
   letter-spacing: 15px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .section-title.title-left {
@@ -160,11 +165,11 @@ body {
   cursor: pointer;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-  transition: filter 0.8s linear;
+  transition: filter 0.3s linear;
 }
 
 .project.project-active {
-  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
 
@@ -175,6 +180,8 @@ body {
   transform: translate(-50%, -50%);
   background-color: var(--projectDescription);
   padding: 1rem 3rem;
+  opacity: 0;
+  transition: opacity 0.2s linear;
 }
 
 .project-description h3 {
@@ -185,6 +192,10 @@ body {
 .project-description p {
   color: var(--grayText);
   font-size: 1.2em;
+}
+
+.project:hover .project-description {
+  opacity: 1;
 }
 
 /* SECTION RENDERS */
