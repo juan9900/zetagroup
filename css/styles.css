@@ -33,6 +33,7 @@ body {
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg);
+  text-transform: uppercase;
 }
 
 .section-title.title-left {
