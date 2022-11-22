@@ -4,6 +4,8 @@
   --secondary: #e1e3db;
   --grayText: #dedede;
   --projectDescription: #3e3e3ec9;
+  --placeholderInactive: #8f8f8f6e;
+  --placeholder: #8f8f8f;
 }
 @font-face {
   font-family: "Typo-Hoop-Hairline"; /*a name to be used later*/
@@ -471,6 +473,7 @@ img.gray {
 
 form {
   width: 100%;
+  padding: 12rem 0;
 }
 
 input {
@@ -482,15 +485,33 @@ input {
   caret-color: #fff;
   color: #fff;
   font-size: 1.2em;
-}
-
-input::placeholder {
-  color: #fff;
-  font-size: 1.2em;
+  opacity: 1;
 }
 
 input:focus {
   outline: none;
+}
+
+/* chrome */
+[placeholder]::-webkit-input-placeholder {
+  color: var(--placeholderInactive);
+  /* font-size: 1.2em; */
+  opacity: 1;
+  transition: color 0.15s ease-in;
+}
+
+/* chrome */
+[placeholder]::-webkit-input-placeholder:focus {
+  color: var(--placeholder);
+}
+
+input[placeholder] {
+  opacity: 1;
+  transition: color 0.15s ease-in;
+}
+
+input[placeholder]:focus {
+  color: var(--placeholder);
 }
 
 .project-type {
@@ -569,12 +590,16 @@ input[type="radio"] {
 }
 .option,
 .selected {
-  padding: 1em;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
 .selected {
-  font-size: 1.2em;
+  /* font-size: 1.4em; */
+}
+
+.select-placeholder {
+  color: var(--placeholderInactive);
 }
 
 .project-type label {
