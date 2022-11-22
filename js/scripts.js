@@ -57,3 +57,23 @@ const positionProjects = () => {
 
 
 positionProjects();
+
+
+// CONTACT SECTION
+
+const selected = $('.selected');
+const optionsContainer = $('.options-container');
+
+const optionsList = $('.option');
+
+selected.on('click', () => {
+    $(optionsContainer).toggleClass('active');
+})
+
+$(optionsList).each((i,obj) => {
+    $(obj).on('click',()=> {
+        $(selected).text($(obj).text());
+        $(optionsContainer).removeClass('active');
+    })
+
+})

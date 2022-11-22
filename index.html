@@ -300,7 +300,7 @@
     <section class="section-contact">
       <div class=" d-flex flex-row justify-content-start align-items-center position-relative">
         <h2 class="section-title title-left">contacto</h2>
-        <form>
+        <form class="contact-form">
           <div class="container text-center">
             <div class="row m-auto">
               <div class="col col-4 offset-2">
@@ -316,27 +316,33 @@
             </div>
             <div class="row m-auto mt-5">
               <div class="col col-8 offset-2">
-                <div class="project-type">
-                  <div class="selected">Tipo de proyecto</div>
+                <div class="project-type d-flex flex-column position-relative">
 
                   <div class="options-container">
 
                     <div class="option">
-                      <input class="radio" type="radio" name="lorem" id="lorem">
+                      <input class="radio" type="radio" name="lorem" id="lorem" value="lorem">
                       <label for="lorem">Lorem</label>
                     </div>
                     <div class="option">
-                      <input class="radio" type="radio" name="lorem2" id="lorem2">
+                      <input class="radio" type="radio" name="lorem2" id="lorem2" value="lorem2">
                       <label for="lorem2">Lorem2</label>
                     </div>
+
                   </div>
-
-
-
+                  <div class="selected">Tipo de proyecto</div>
                 </div>
               </div>
             </div>
+            <div class="row m-auto mt-5">
+              <div class="col col-8 offset-2">
+                <input type="text" name="direction" id="direction" placeholder="Dirección">
+                <input class="mt-5 text-center" type="submit" value="ENVIAR">
+
+              </div>
+            </div>
           </div>
+
         </form>
         </form>
     </section>
