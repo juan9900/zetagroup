@@ -506,12 +506,17 @@ input:focus {
 
 input::-moz-placeholder {
   transition: color 8s ease-in;
+  opacity: 1;
   color: var(--placeholderInactive);
 }
 
 input:focus::-moz-placeholder {
   opacity: 1;
   color: var(--placeholder);
+}
+
+.selected.select-placeholder {
+  color: var(--placeholderInactive);
 }
 
 .project-type {
@@ -594,14 +599,6 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.selected {
-  /* font-size: 1.4em; */
-}
-
-.select-placeholder {
-  color: var(--placeholderInactive);
-}
-
 .project-type label {
   cursor: pointer;
 }
@@ -619,7 +616,7 @@ input[type="radio"] {
   font-size: 2em;
   font-weight: bold;
   width: auto;
-  transition: color 0.2s ease-in;
+  transition: color 0.1s ease-in;
 }
 
 .contact-form input[type="submit"]:hover {

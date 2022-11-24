@@ -73,6 +73,7 @@ selected.on('click', () => {
 $(optionsList).each((i,obj) => {
     $(obj).on('click',()=> {
         $(selected).text($(obj).text());
+        $(selected).removeClass('select-placeholder');
         $(optionsContainer).removeClass('active');
     })
 
