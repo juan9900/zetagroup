@@ -1,6 +1,9 @@
-//Projects showcase
+AOS.init();
+
+$('.product').css('opacity',0);
+$('.render').css('opacity',0);
+
 const projects = $('.project');
-console.log(projects);
 
 const projects2 = document.querySelectorAll('.project');
 
@@ -8,21 +11,15 @@ const projects2 = document.querySelectorAll('.project');
 
 let prevProject = projects.length - 1;
 const disableProjects = (current) => {
-    console.log('current',current,'----------------------------------');
     var zindex = 9999;
-    console.log('prevProject',prevProject);
     $('.project').each(function(i,obj){
-        console.log('index',i);
         
-        console.log('currentIndex',zindex);
         $(this).removeClass('project-active');
         if(i != current){
             $(this).css('z-index',`${zindex}`);
         }
-        console.log('length',Math.round(projects.length/2))
         
         if(current >= Math.round((projects.length/2))){
-            console.log('mayor');
             zindex+=1;
         }else{
             zindex-=1;
@@ -35,11 +32,10 @@ const disableProjects = (current) => {
 
 const positionProjects = () => {
     current = projects.length - 1;
-    console.log(`current is ${current}`);
     var right = 30;
     var zindex = 990;
     $('.project').each(function(i,obj){
-        console.log(this);
+        $(this).css('opacity',0);
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
         $(this).on('mouseover', () => {
             current = i;
@@ -56,7 +52,6 @@ const positionProjects = () => {
 }
 
 
-positionProjects();
 
 
 // CONTACT SECTION
@@ -77,4 +72,21 @@ $(optionsList).each((i,obj) => {
         $(optionsContainer).removeClass('active');
     })
 
+})
+
+
+$(document).ready(()=>{
+    positionProjects();
+})
+
+
+// Handle navigation menu button press
+$('.hamburger-container').on('click',() => {
+    console.log('🍔')
+    $('.nav-container').toggleClass('nav-visible');
+    $('.hamburger-container').toggleClass('is-active');
+    $('.nav-li').on('click',function(){
+        $('.nav-container').removeClass('nav-visible');
+        $('.hamburger-container').removeClass('is-active');
+    })
 })
