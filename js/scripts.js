@@ -81,12 +81,12 @@ $(document).ready(()=>{
 
 
 // Handle navigation menu button press
-$('.hamburger-container').on('click',() => {
+$('.menu-btn').on('click',() => {
     console.log('🍔')
     $('.nav-container').toggleClass('nav-visible');
-    $('.hamburger-container').toggleClass('is-active');
+    $('.menu-btn').toggleClass('is-active');
     $('.nav-li').on('click',function(){
         $('.nav-container').removeClass('nav-visible');
-        $('.hamburger-container').removeClass('is-active');
+        $('.menu-btn').removeClass('is-active');
     })
 })
