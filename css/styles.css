@@ -12,6 +12,7 @@ html {
   --black: #000000;
   --primary: #3e3e3e;
   --primaryLight: #77777b;
+  --primaryDark: #323232;
   --secondary: #e1e3db;
   --grayText: #dedede;
   --projectDescription: #3e3e3ec9;
@@ -35,6 +36,30 @@ html {
 
 body {
   font-family: Akhandsoft-Semilight;
+}
+
+.floating-ws {
+  position: fixed;
+  right: 1%;
+  bottom: 5%;
+  width: 4.5rem;
+  height: 4.5rem;
+  z-index: 3000;
+  border-radius: 100%;
+  background-color: var(--primaryLight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.15s ease-in;
+}
+
+.floating-ws:hover {
+  background-color: var(--primaryDark);
+}
+
+.floating-ws img {
+  width: 75%;
+  height: 75%;
 }
 
 .section-title {
@@ -245,7 +270,7 @@ body {
 .projects-container {
   right: 0;
   bottom: 0;
-  z-index: 99999;
+  z-index: 200;
   width: 75%;
 }
 

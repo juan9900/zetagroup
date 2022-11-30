@@ -11,7 +11,7 @@ const projects2 = document.querySelectorAll('.project');
 
 let prevProject = projects.length - 1;
 const disableProjects = (current) => {
-    var zindex = 9999;
+    var zindex = 100;
     $('.project').each(function(i,obj){
         
         $(this).removeClass('project-active');
@@ -33,7 +33,7 @@ const disableProjects = (current) => {
 const positionProjects = () => {
     current = projects.length - 1;
     var right = 30;
-    var zindex = 990;
+    var zindex = 190;
     $('.project').each(function(i,obj){
         $(this).css('opacity',0);
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
@@ -41,7 +41,7 @@ const positionProjects = () => {
             current = i;
             disableProjects(current);
             $(this).addClass('project-active');
-            $(this).css('z-index','99999');
+            $(this).css('z-index','1000');
         })
         $(this).on('mouseleave', () => {
             $(this).removeClass('project-active');
