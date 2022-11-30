@@ -1,6 +1,6 @@
 AOS.init();
 
-$('.product').css('opacity',0);
+// $('.product').css('opacity',0);
 $('.render').css('opacity',0);
 
 const projects = $('.project');
@@ -89,4 +89,16 @@ $('.menu-btn').on('click',() => {
         $('.nav-container').removeClass('nav-visible');
         $('.menu-btn').removeClass('is-active');
     })
+})
+
+
+// Handle show hidden products button press
+$('.show-products').on('click',function(){
+    // if($(this).hasClass('show')){
+    //     $(this).text('Mostrar más');
+    // }else{
+    //     $(this).text('Mostrar menos');
+    // }
+    $(this).toggleClass('show');
+    
 })
