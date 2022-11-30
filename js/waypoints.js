@@ -6,7 +6,8 @@ var waypointAbout = new Waypoint({
     element: aboutText,
     handler: function(direction) {
       console.log('Scrolled to waypoint!')
-      $(aboutText).addClass('animate__backInRight');
+      // $(aboutText).addClass('animate__backInRight');
+      $(aboutText).addClass('animate__fadeInLeft');
     },
     offset: 800
     

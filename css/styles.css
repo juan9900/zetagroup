@@ -217,6 +217,8 @@ body {
 
 .about-text-container img {
   max-width: 50%;
+  position: relative;
+  z-index: 2;
 }
 
 .about-text {
@@ -225,6 +227,8 @@ body {
   font-size: 1.3em;
   padding: 5rem 2rem;
   width: 30%;
+  position: relative;
+  z-index: 1;
 }
 
 /* SECTION PROJECTS */
