@@ -1,15 +1,92 @@
+let width = screen.width;
+const project1 = $('.project-1');
 
+
+
+function isOnScreen(elem) {
+	// if the element doesn't exist, abort
+	if( elem.length == 0 ) {
+		return;
+	}
+	var $window = $(window)
+	var viewport_top = $window.scrollTop()
+  console.log('--------------------')
+	console.log("🚀 ~ file: waypoints.js:13 ~ isOnScreen ~ viewport_top", viewport_top)
+	var viewport_height = window.outerHeight;
+	var viewport_bottom = viewport_top + viewport_height
+	console.log("🚀 ~ file: waypoints.js:17 ~ isOnScreen ~ viewport_bottom", viewport_bottom)
+	var $elem = $(elem)
+	var top = $elem.offset().top
+	console.log("🚀 ~ file: waypoints.js:19 ~ isOnScreen ~ top", top)
+	var height = $elem.height()
+	var bottom = top + height
+  console.log("🚀 ~ file: waypoints.js:22 ~ isOnScreen ~ bottom", bottom)
+
+  let topMayor, bottomMenor;
+  if(top>viewport_top){
+     topMayor = '✅'
+  }else{
+     topMayor = '❌';
+  }
+
+  if(bottom<viewport_bottom){
+     bottomMenor = '✅'
+  }else{
+     bottomMenor = '❌';
+  }
+  console.log('TopMayor: ',topMayor);
+  console.log('BottomMenor: ' , bottomMenor);
+  console.log('--------------------')
+  
+
+	return (top >= viewport_top && top < viewport_bottom) 
+  &&
+	(bottom > viewport_top && bottom <= viewport_bottom) 
+	// (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+}
+
+$(document).ready(()=>{
+  // $(document).on('resize scroll',()=>{
+  //   console.log('scrolled');
+  //   if ($('.project-1').isInViewport()) {
+  //     // do something
+  //     console.log('visible')
+  //     $(project1).addClass('colored');
+  // } else {
+  //     // do something else
+  //     $(project1).removeClass('colored');
+
+  // }
+  // })
+
+
+
+  const onScroll = (elem) => {
+    if( isOnScreen( $( '.project-1' ) ) ) { /* Pass element id/class you want to check */
+    
+			console.log( 'The specified container is in view.' );
+      $(project1).addClass('colored');
+ 		}else{
+      $(project1).removeClass('colored')
+    }
+  }
+  $(window).on('resize scroll', onScroll);
+  $(window).on('touchmove', onScroll); // for mobile
+})
 
 // ABOUT US TEXT
+const aboutSection = $('#section-about');
 const aboutText = $('#about-text');
 var waypointAbout = new Waypoint({
-    element: aboutText,
+    element: aboutSection,
     handler: function(direction) {
       console.log('Scrolled to waypoint!')
       // $(aboutText).addClass('animate__backInRight');
-      $(aboutText).addClass('animate__fadeInLeft');
+      width < 780 ? $(aboutText).addClass('animate__fadeInUp animate__animated') : $(aboutText).addClass('animate__fadeInLeft animate__animated');
+
+
     },
-    offset: 800
+    offset: width < 780 ? '58%' : '50%'
     
   })
 

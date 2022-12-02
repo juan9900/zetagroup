@@ -38,6 +38,14 @@ body {
   font-family: Akhandsoft-Semilight;
 }
 
+.animation {
+  opacity: 0;
+}
+
+.animation.animate__animated {
+  opacity: 1;
+}
+
 .floating-ws {
   position: fixed;
   right: 1%;
@@ -173,6 +181,11 @@ body {
   opacity: 0;
 } */
 
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 3;
+}
+
 .language-selector-container {
   z-index: 99999;
   position: absolute;
@@ -199,10 +212,11 @@ body {
 
 .welcome-title-container {
   position: absolute;
-  z-index: 999;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .welcome-logo {
@@ -235,9 +249,6 @@ body {
 
 .section-title h2 {
   flex-grow: 0;
-}
-
-.about-text-container {
 }
 
 .about-text-container img {
@@ -474,6 +485,12 @@ img.gray {
   padding-bottom: 20rem;
 }
 
+.product-img {
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
 .hidden-products {
   overflow: hidden;
   transition: max-height 0.35s ease-out;
@@ -499,7 +516,7 @@ img.gray {
   height: 20px;
   width: 20px;
   left: 50%;
-  transform: translateX(-25%);
+  transform: translateX(-50%);
   top: 100%;
   /* transform: translateY(-25%); */
   /* background-color: red; */
@@ -512,7 +529,7 @@ img.gray {
 }
 
 .show-products.show::after {
-  transform: rotateX(180deg) translateX(-25%);
+  transform: rotateX(180deg) translateX(-50%);
 
   /* transform: translateY(-25%); */
 }
@@ -896,4 +913,202 @@ nav ul li a {
 }
 nav ul li {
   margin: 0.7rem 0;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .section-title {
+    letter-spacing: 6px;
+  }
+  .carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .welcome-logo {
+    max-width: 9rem;
+  }
+
+  .welcome-title {
+    text-align: center;
+  }
+
+  .welcome-message {
+    text-align: center;
+  }
+
+  .welcome-message span {
+    display: none;
+  }
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after,
+  .menu-btn__burger {
+    width: 40px;
+    height: 5px;
+  }
+
+  .menu-btn__burger::before {
+    transform: translateY(-13px);
+  }
+
+  .menu-btn__burger::after {
+    transform: translateY(13px);
+  }
+
+  .section-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 3em;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .section-about {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-about > .container {
+    padding: 0 2rem;
+  }
+
+  .about-text-container img {
+    display: none;
+  }
+
+  .about-text {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(39, 39, 39, 0.52), #3e3e3ee4),
+      url("../assets/img/IMAGEN-SOMOS.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .section-projects {
+    margin-top: 2rem;
+  }
+
+  .project {
+    position: static;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .project:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  .colored {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(0);
+  }
+
+  .project.colored:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+
+  .project.project-active {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  .project.project-active.colored {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  .project img {
+    height: 100%;
+  }
+
+  .projects-container {
+    width: 90%;
+  }
+
+  .project-description {
+    display: none;
+  }
+
+  .project-description p {
+    display: none;
+  }
+
+  .btn-show-project {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    background: rgba(0, 0, 0, 0.437);
+    border: 2px solid #fff;
+    color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .project.visible-vh {
+  }
+
+  /* .eye-logo {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    -webkit-mask: url("../assets/img/ojito.svg") no-repeat center;
+    mask: url("../assets/img/ojito.svg") no-repeat center;
+  } */
+
+  .btn-show-project img {
+  }
+
+  .project-place {
+    font-size: 1.8em;
+  }
+
+  /* SECTION RENDERS */
+
+  /* SECTION PRODUCTS */
+
+  .section-products h2 {
+    padding-bottom: 2rem;
+    margin: 0 auto;
+  }
+
+  .product.flex-row .show-info {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .product.flex-row-reverse .product-info {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .product {
+    max-width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-info h3 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .product-info p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .show-products {
+    margin-bottom: 1.5rem;
+  }
 }

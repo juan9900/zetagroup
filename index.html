@@ -44,11 +44,16 @@
       </div>
       <div class="welcome-title-container d-flex flex-column align-items-center justify-content-center ">
         <img class="welcome-logo" src="assets/img/LOGO-BLANCO2nuevo.png" alt="Logo zeta group blanco">
-        <h1 class="welcome-title">
-          ZETA GROUP
-        </h1>
-        <h4>
-          Arquitectura<span>-</span>Diseño<span>-</span>Construcción
+        <div class="position-relative">
+          <h1 class="welcome-title">
+            ZETA GROUP
+          </h1>
+        </div>
+
+        <h4 class="welcome-message d-flex flex-column flex-md-row">
+          <p>Arquitectura</p><span>-</span>
+          <p>Diseño</p><span>-</span>
+          <p>Construcción</p>
         </h4>
       </div>
       <div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
@@ -105,11 +110,11 @@
       <img src="assets/img/WS-SOLO.png" alt="contacto whatsapp">
     </a>
     <section class="section-about" id="section-about">
-      <div class="container d-flex flex-row-reverse justify-content-between">
+      <div class="container d-flex flex-column flex-lg-row-reverse justify-content-between">
         <h2 class="section-title title-right ">Sobre nosotros</h2>
-        <div class="about-text-container d-flex flex-row justify-content-center align-items-center">
+        <div class="about-text-container d-flex flex-column flex-lg-row justify-content-center align-items-center">
           <img src="assets/img/IMAGEN-SOMOS.png" alt="quienes somos zeta group">
-          <div class="about-text animate__animated animate__slow" id="about-text">
+          <div class="animation about-text  animate__slow" id="about-text">
             Lorem ipsum dolor sit amet,
             consectetur adipisicing elit, sed
             do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -120,16 +125,17 @@
       </div>
 
     </section>
-    <section class="section-projects" id="section-projects">
-      <div class=" d-flex flex-row justify-content-between align-items-center position-relative">
+    <section class="section-projects " id="section-projects">
+      <div class=" d-flex flex-lg-row flex-column  justify-content-between align-items-center position-relative">
         <h2 class="section-title title-left">Proyectos</h2>
-        <div class="projects-container d-flex flex-row justify-content-end align-items-center position-relative">
-          <div class="project animate__animated">
+        <div class="projects-container d-flex flex-lg-row flex-column-reverse justify-content-end align-items-center position-relative">
+          <div class="project project-1 animate__animated">
             <div class="project-description">
               <h3 class="text-center">OFICINA</h3>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia iste ducimus at atque quae quis veniam? Ducimus exercitationem, animi voluptatum distinctio praesentium molestias suscipit consequuntur deleniti at dolores voluptates culpa!</p>
             </div>
             <img src="assets/img/proyecto1.jpg" alt="">
+            <button class="btn-show-project"><img src="assets/img/ojito.svg" alt="ver mas"></button>
           </div>
           <div class="project animate__animated">
             <div class="project-description">
@@ -137,6 +143,8 @@
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia iste ducimus at atque quae quis veniam? Ducimus exercitationem, animi voluptatum distinctio praesentium molestias suscipit consequuntur deleniti at dolores voluptates culpa!</p>
             </div>
             <img src="assets/img/proyecto2.jpg" alt="">
+            <button class="btn-show-project"><img src="assets/img/ojito.svg" alt="ver mas"></button>
+
           </div>
           <div class="project animate__animated">
             <div class="project-description">
@@ -144,6 +152,8 @@
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia iste ducimus at atque quae quis veniam? Ducimus exercitationem, animi voluptatum distinctio praesentium molestias suscipit consequuntur deleniti at dolores voluptates culpa!</p>
             </div>
             <img src="assets/img/proyecto3.jpg" alt="">
+            <button class="btn-show-project"><img src="assets/img/ojito.svg" alt="ver mas"></button>
+
           </div>
           <div class="project animate__animated">
             <div class="project-description">
@@ -151,12 +161,14 @@
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia iste ducimus at atque quae quis veniam? Ducimus exercitationem, animi voluptatum distinctio praesentium molestias suscipit consequuntur deleniti at dolores voluptates culpa!</p>
             </div>
             <img src="assets/img/proyecto4.jpg" alt="">
+            <button class="btn-show-project"><img src="assets/img/ojito.svg" alt="ver mas"></button>
+
           </div>
         </div>
       </div>
     </section>
-    <section class="section-renders" id="section-renders">
-      <div class="container d-flex flex-row-reverse justify-content-between align-items-center">
+    <section class="section-renders " id="section-renders">
+      <div class="container d-flex flex-column flex-lg-row-reverse justify-content-between align-items-center">
         <h2 class="section-title title-right">Renders</h2>
         <div class="renders-container ">
           <div class="render animate__animated one position-relative">
@@ -208,12 +220,13 @@
         </div>
       </div>
     </section>
-    <section class="section-products" id="section-products">
-      <div class="container d-flex flex-row justify-content-between align-items-start">
+
+    <section class="section-products " id="section-products">
+      <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-start">
         <h2 class="section-title title-right">Productos</h2>
-        <div class="about-text-container d-flex flex-column justify-content-center align-items-center position-relative">
-          <div id="product-1" class="product animate__animated  flex-row align-items-center justify-content-start">
-            <img src="assets/img/productos1.png" alt="product lamp">
+        <div class=" d-flex flex-column justify-content-center align-items-center position-relative">
+          <div id="product-1" class="product animate__animated flex-column  flex-lg-row align-items-center justify-content-start">
+            <img class="product-img" src="assets/img/productos1.png" alt="product lamp">
             <div class="product-info d-flex flex-column justify-content-center align-items-start">
               <h3>
                 Lámpara
@@ -223,8 +236,8 @@
               </p>
             </div>
           </div>
-          <div id="product-2" class="product animate__animated  flex-row-reverse align-items-center justify-content-end">
-            <img src="assets/img/productos2.png" alt="product lamp">
+          <div id="product-2" class="product animate__animated flex-column flex-lg-row-reverse align-items-center justify-content-end">
+            <img class="product-img" src="assets/img/productos2.png" alt="product lamp">
             <div class="product-info d-flex flex-column justify-content-center align-items-end">
               <h3>
                 Lámpara
@@ -234,8 +247,8 @@
               </p>
             </div>
           </div>
-          <div id="product-3" class="product animate__animated  flex-row align-items-center justify-content-start">
-            <img src="assets/img/productos3.png" alt="product lamp">
+          <div id="product-3" class="product animate__animated  flex-column  flex-lg-row align-items-center justify-content-start">
+            <img class="product-img" src="assets/img/productos3.png" alt="product lamp">
             <div class="product-info d-flex flex-column justify-content-center align-items-start">
               <h3>
                 Lámpara
@@ -247,8 +260,8 @@
           </div>
           <button class="show-products position-relative">Más productos</button>
           <div class="hidden-products">
-            <div id="product-1" class="product animate__animated  flex-row align-items-center justify-content-start">
-              <img src="assets/img/productos1.png" alt="product lamp">
+            <div id="product-1" class="product animate__animated flex-column  flex-lg-row align-items-center justify-content-start">
+              <img class="product-img" src="assets/img/productos1.png" alt="product lamp">
               <div class="product-info d-flex flex-column justify-content-center align-items-start">
                 <h3>
                   Lámpara
@@ -258,8 +271,8 @@
                 </p>
               </div>
             </div>
-            <div id="product-2" class="product animate__animated  flex-row-reverse align-items-center justify-content-end">
-              <img src="assets/img/productos2.png" alt="product lamp">
+            <div id="product-2" class="product animate__animated flex-column flex-lg-row-reverse align-items-center justify-content-end">
+              <img class="product-img" src="assets/img/productos2.png" alt="product lamp">
               <div class="product-info d-flex flex-column justify-content-center align-items-end">
                 <h3>
                   Lámpara
@@ -269,8 +282,8 @@
                 </p>
               </div>
             </div>
-            <div id="product-3" class="product animate__animated  flex-row align-items-center justify-content-start">
-              <img src="assets/img/productos3.png" alt="product lamp">
+            <div id="product-3" class="product animate__animated  flex-column  flex-lg-row align-items-center justify-content-start">
+              <img class="product-img" src="assets/img/productos3.png" alt="product lamp">
               <div class="product-info d-flex flex-column justify-content-center align-items-start">
                 <h3>
                   Lámpara
@@ -286,7 +299,7 @@
 
       </div>
     </section>
-    <section class="section-steps" id="section-steps">
+    <section class="section-steps d-none" id="section-steps">
       <h2 class="section-title title-right steps-title">Pasos</h2>
 
       <!-- <div class=" d-flex flex-row-reverse justify-content-between align-items-center"> -->
@@ -359,7 +372,7 @@
         <!-- </div> -->
       </div>
     </section>
-    <section class="section-quotation" id="section-quotation">
+    <section class="section-quotation d-none" id="section-quotation">
       <div class=" d-flex flex-row justify-content-start align-items-center position-relative">
         <h2 class="section-title title-left">cotización</h2>
         <form class="contact-form">
@@ -407,7 +420,7 @@
         </form>
       </div>
     </section>
-    <section class="section-contact pt-5" id="section-contact">
+    <section class="section-contact d-none pt-5" id="section-contact">
       <div class="mt-5 container d-flex flex-row justify-content-center align-items-center ">
         <div class=" d-flex flex-column align-items-center contact-info">
           <img src="assets/img/LOGO-NEGRO.png" alt="logo zetagroup">
