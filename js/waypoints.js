@@ -13,17 +13,17 @@ function isOnScreen(elem) {
 	}
 	var $window = $(window)
 	var viewport_top = $window.scrollTop()
-  console.log('--------------------')
-	console.log("🚀 ~ file: waypoints.js:13 ~ isOnScreen ~ viewport_top", viewport_top)
+  // console.log('--------------------')
+	// console.log("🚀 ~ file: waypoints.js:13 ~ isOnScreen ~ viewport_top", viewport_top)
 	var viewport_height = window.outerHeight;
 	var viewport_bottom = viewport_top + viewport_height
-	console.log("🚀 ~ file: waypoints.js:17 ~ isOnScreen ~ viewport_bottom", viewport_bottom)
+	// console.log("🚀 ~ file: waypoints.js:17 ~ isOnScreen ~ viewport_bottom", viewport_bottom)
 	var $elem = $(elem)
 	var top = $elem.offset().top
-	console.log("🚀 ~ file: waypoints.js:19 ~ isOnScreen ~ top", top)
+	// console.log("🚀 ~ file: waypoints.js:19 ~ isOnScreen ~ top", top)
 	var height = $elem.height()
 	var bottom = top + height
-  console.log("🚀 ~ file: waypoints.js:22 ~ isOnScreen ~ bottom", bottom)
+  // console.log("🚀 ~ file: waypoints.js:22 ~ isOnScreen ~ bottom", bottom)
 
   let topMayor, bottomMenor;
   if(top>viewport_top){
@@ -37,9 +37,9 @@ function isOnScreen(elem) {
   }else{
      bottomMenor = '❌';
   }
-  console.log('TopMayor: ',topMayor);
-  console.log('BottomMenor: ' , bottomMenor);
-  console.log('--------------------')
+  // console.log('TopMayor: ',topMayor);
+  // console.log('BottomMenor: ' , bottomMenor);
+  // console.log('--------------------')
   
 
 	return (top >= viewport_top && top < viewport_bottom) 
@@ -54,7 +54,6 @@ $(document).ready(()=>{
   const onScroll = (elem) => {
     if( isOnScreen( $( '.project-1' ) ) ) { /* Pass element id/class you want to check */
     
-			console.log( 'The specified container is in view.' );
       $(project1).addClass('colored');
  		}else{
       $(project1).removeClass('colored')
@@ -62,7 +61,6 @@ $(document).ready(()=>{
 
     if( isOnScreen( $( '.project-2' ) ) ) { /* Pass element id/class you want to check */
     
-			console.log( 'The specified container is in view.' );
       $(project2).addClass('colored');
  		}else{
       $(project2).removeClass('colored')
@@ -70,7 +68,6 @@ $(document).ready(()=>{
 
     if( isOnScreen( $( '.project-3' ) ) ) { /* Pass element id/class you want to check */
     
-			console.log( 'The specified container is in view.' );
       $(project3).addClass('colored');
  		}else{
       $(project3).removeClass('colored')
@@ -78,7 +75,6 @@ $(document).ready(()=>{
 
     if( isOnScreen( $( '.project-4' ) ) ) { /* Pass element id/class you want to check */
     
-			console.log( 'The specified container is in view.' );
       $(project4).addClass('colored');
  		}else{
       $(project4).removeClass('colored')
@@ -155,41 +151,56 @@ var waypointRenders = new Waypoint({
 
 // PRODUCTS
 const productOne = $('#product-1');
+const productTwo = $('#product-2');
+const productThree = $('#product-3');
+const productsSection = $('.section-products');
 var waypointProducts = new Waypoint({
-    element: productOne,
-    handler: function(direction) {
-        console.log('scrolled to product one');
-        $(productOne).css('opacity',1);
-        $(productOne).addClass('animate__fadeInRight');
-    },
-    offset: 700
-    
-  })
+  element: productsSection,
+  handler: function(direction){
+    console.log('scrolled to products');
+    $(productOne).css('opacity',1);
+    $(productOne).addClass('animate__fadeInRight');
 
-  const productTwo = $('#product-2');
+    $(productTwo).css('opacity',1);
+    $(productTwo).addClass('animate__fadeInLeft');
 
-  var waypointProducts = new Waypoint({
-    element: productTwo,
-    handler: function(direction) {
-        console.log('scrolled to product one');
-        $(productTwo).css('opacity',1);
-        $(productTwo).addClass('animate__fadeInLeft');
-    },
-    offset: 700
-    
-  })
+    $(productThree).css('opacity',1);
+    $(productThree).addClass('animate__fadeInRight');
 
-  const productThree = $('#product-3');
-var waypointProducts = new Waypoint({
-    element: productThree,
-    handler: function(direction) {
-        console.log('scrolled to product Three');
-        $(productThree).css('opacity',1);
-        $(productThree).addClass('animate__fadeInRight');
-    },
-    offset: 700
+    $('.product').css('opacity',1);
+  },
+  offset: 700
+})
+// var waypointProducts = new Waypoint({
+//     element: productOne,
+//     handler: function(direction) {
+//         console.log('scrolled to product one');
+//         
+//     },
+//     offset: 700
     
-  })
+//   })
+
+
+//   var waypointProducts = new Waypoint({
+//     element: productTwo,
+//     handler: function(direction) {
+//         console.log('scrolled to product one');
+//         
+//     },
+//     offset: 700
+    
+//   })
+
+// var waypointProducts = new Waypoint({
+//     element: productThree,
+//     handler: function(direction) {
+//         console.log('scrolled to product Three');
+//         
+//     },
+//     offset: 700
+    
+//   })
 
 // const productsSection = $('.section-products');
 // const productsList = $('.product');
