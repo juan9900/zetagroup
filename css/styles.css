@@ -922,7 +922,7 @@ nav ul li {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 900px) {
   body {
     overflow-x: hidden;
   }
@@ -1256,7 +1256,7 @@ nav ul li {
 
   /* SECTION CONTACT */
   .map {
-    width: 80%;
+    width: 90%;
     height: 20rem;
   }
 
@@ -1273,5 +1273,46 @@ nav ul li {
 
   .contact-info li {
     font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  /* SECTION PROJECTS */
+
+  .projects-container {
+    flex-wrap: wrap;
+  }
+  .project {
+    width: 46%;
+    margin: 0 2% 2rem 2%;
+  }
+
+  /* SECTION RENDERS */
+  .section-renders {
+    padding: 2rem 0.5rem 3rem 0.5rem;
+  }
+
+  .steps-row div {
+    flex: 1 0 auto;
+  }
+
+  .step {
+    width: 50%;
+  }
+
+  .step:last-of-type {
+    width: 50%;
+    flex-grow: 0;
+    margin: 0 auto;
+  }
+
+  .step-icon {
+    margin: 0 auto;
+  }
+
+  .steps-row:last-of-type {
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
   }
 }
