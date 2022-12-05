@@ -1072,6 +1072,57 @@ nav ul li {
 
   /* SECTION RENDERS */
 
+  .section-renders {
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  .circle {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    border: 2px solid white;
+    opacity: 0;
+    z-index: 100;
+    border-radius: 100%;
+    animation: circle 3s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+    -webkit-animation: circle 2s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+  }
+
+  @keyframes circle {
+    0% {
+      transform: scale(0.5, 0.5);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2.2, 2.2);
+      opacity: 0;
+    }
+  }
+
+  .render:hover .render-color-container {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  .render.one:hover .render-color-container {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  .render.three:hover .render-color-container {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  .render.four:hover .render-color-container,
+  .render.five:hover .render-color-container {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
   /* SECTION PRODUCTS */
 
   .section-products h2 {

@@ -1,5 +1,8 @@
 let width = screen.width;
 const project1 = $('.project-1');
+const project2 = $('.project-2');
+const project3 = $('.project-3');
+const project4 = $('.project-4');
 
 
 
@@ -46,19 +49,6 @@ function isOnScreen(elem) {
 }
 
 $(document).ready(()=>{
-  // $(document).on('resize scroll',()=>{
-  //   console.log('scrolled');
-  //   if ($('.project-1').isInViewport()) {
-  //     // do something
-  //     console.log('visible')
-  //     $(project1).addClass('colored');
-  // } else {
-  //     // do something else
-  //     $(project1).removeClass('colored');
-
-  // }
-  // })
-
 
 
   const onScroll = (elem) => {
@@ -68,6 +58,30 @@ $(document).ready(()=>{
       $(project1).addClass('colored');
  		}else{
       $(project1).removeClass('colored')
+    }
+
+    if( isOnScreen( $( '.project-2' ) ) ) { /* Pass element id/class you want to check */
+    
+			console.log( 'The specified container is in view.' );
+      $(project2).addClass('colored');
+ 		}else{
+      $(project2).removeClass('colored')
+    }
+
+    if( isOnScreen( $( '.project-3' ) ) ) { /* Pass element id/class you want to check */
+    
+			console.log( 'The specified container is in view.' );
+      $(project3).addClass('colored');
+ 		}else{
+      $(project3).removeClass('colored')
+    }
+
+    if( isOnScreen( $( '.project-4' ) ) ) { /* Pass element id/class you want to check */
+    
+			console.log( 'The specified container is in view.' );
+      $(project4).addClass('colored');
+ 		}else{
+      $(project4).removeClass('colored')
     }
   }
   $(window).on('resize scroll', onScroll);
