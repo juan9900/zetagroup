@@ -35,7 +35,6 @@ const positionProjects = () => {
     var right = 30;
     var zindex = 190;
     $('.project').each(function(i,obj){
-        $(this).css('opacity',0);
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
         $(this).on('mouseover', () => {
             current = i;
