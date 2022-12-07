@@ -1192,6 +1192,10 @@ nav ul li {
     margin: 0 auto;
   }
 
+  .product2 p {
+    text-align: end;
+  }
+
   .product-info p {
     font-size: 1em;
     text-align: center;

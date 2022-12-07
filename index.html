@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <p id="siteContent">Test</p>
   <header>
     <nav class="nav-container">
       <ul>
@@ -38,8 +39,8 @@
         <div class="menu-btn__burger"></div>
       </div>
       <div class="language-selector-container d-flex flex-row justify-content-end align-items-center">
-        <p class="active">ES</p>
-        <p>EN</p>
+        <p class="active" id="btn-es">ES</p>
+        <p id="btn-en">EN</p>
 
       </div>
       <div class="welcome-title-container d-flex flex-column align-items-center justify-content-center ">
@@ -51,9 +52,9 @@
         </div>
 
         <h4 class="welcome-message d-flex flex-column flex-md-row">
-          <p>Arquitectura</p><span>-</span>
-          <p>Diseño</p><span>-</span>
-          <p>Construcción</p>
+          <p id="welcome-span-1">Arquitectura</p><span>-</span>
+          <p id="welcome-span-2">Diseño</p><span>-</span>
+          <p id="welcome-span-3">Construcción</p>
         </h4>
       </div>
       <div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
@@ -542,10 +543,7 @@
   <div class="modal fade" id="render1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Render 1</h1>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
+
         <div class="modal-body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos.
         </div>
@@ -560,10 +558,7 @@
   <div class="modal fade" id="render2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Render 2</h1>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
+
         <div class="modal-body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos.
         </div>
@@ -578,10 +573,7 @@
   <div class="modal fade" id="render3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Render 3</h1>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
+
         <div class="modal-body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos.
         </div>
@@ -596,10 +588,7 @@
   <div class="modal fade" id="render4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Render 4</h1>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
+
         <div class="modal-body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos.
         </div>
@@ -614,10 +603,7 @@
   <div class="modal fade" id="render5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Render 5</h1>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
+
         <div class="modal-body">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos.
         </div>
@@ -633,6 +619,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/waypoints.js"></script>
+  <script src="js/language.js"></script>
 
   <script src="js/scripts.js"></script>
 </body>
