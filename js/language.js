@@ -219,7 +219,7 @@ function changeLanguage(lang) {
         $('.product-3-title').text(language.eng.section4Product3Title);
         $('.product-3-content').text(language.eng.section4Product3Content);
 
-        $('.2roduct-4-title').text(language.eng.section4Product4Title);
+        $('.product-4-title').text(language.eng.section4Product4Title);
         $('.product-4-content').text(language.eng.section4Product4Content);
 
         $('.product-5-title').text(language.eng.section4Product5Title);
@@ -239,6 +239,10 @@ function changeLanguage(lang) {
         $('#step-7').text(language.eng.section5Step7);
 
         $('#contact-input-1').attr('placeholder',language.eng.section6Input1Placeholder);
-
+        $('#contact-input-2').attr('placeholder',language.eng.section6Input2Placeholder);
+        $('#contact-input-3').attr('placeholder',language.eng.section6Input3Placeholder);
+        $('#contact-input-4').attr('placeholder',language.eng.section6Input4Placeholder);
+        $('#contact-input-5').text(language.eng.section6Input5Placeholder);
+        $('#contact-option-1').text(language.eng.section6Input5Option1)
       }
     }
