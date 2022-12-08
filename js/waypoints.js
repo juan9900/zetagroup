@@ -155,7 +155,7 @@ var waypointRenders = new Waypoint({
         $(this).addClass('animate__zoomIn');
       })
     },
-    offset: 400
+    offset: 700
     
   })
 
@@ -179,7 +179,7 @@ var waypointProducts = new Waypoint({
 
     $('.product').css('opacity',1);
   },
-  offset: 700
+  offset: 400
 })
 // var waypointProducts = new Waypoint({
 //     element: productOne,
