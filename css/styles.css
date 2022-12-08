@@ -670,6 +670,9 @@ img.gray {
 .section-quotation {
   padding: 10rem 0 2rem 0;
   background: url("../assets/img/FONDO-FORMULARIO.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .section-quotation h2 {
