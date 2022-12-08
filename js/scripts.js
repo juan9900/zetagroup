@@ -74,9 +74,6 @@ $(optionsList).each((i,obj) => {
 })
 
 
-$(document).ready(()=>{
-    positionProjects();
-})
 
 
 // Handle navigation menu button press
@@ -100,4 +97,8 @@ $('.show-products').on('click',function(){
     // }
     $(this).toggleClass('show');
     
+})
+
+$(document).ready(()=>{
+    positionProjects();
 })

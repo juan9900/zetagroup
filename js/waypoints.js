@@ -52,6 +52,8 @@ $(document).ready(()=>{
 
 
   const onScroll = (elem) => {
+    $('.nav-container').removeClass('nav-visible');
+    $('.menu-btn').removeClass('is-active');
     if( isOnScreen( $( '.project-1' ) ) ) { /* Pass element id/class you want to check */
     
       $(project1).addClass('colored');
