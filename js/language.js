@@ -98,15 +98,13 @@ function changeLanguage(lang) {
         section6Input4Placeholder: 'E-MAIL',
         section6Input5Placeholder: 'PROJECT TYPE',
         section6Input5Option1:'ENG LOREM 1',
-        section6Input5Option1: 'ENG LOREM 2',
+        section6Input5Option2: 'ENG LOREM 2',
         section6Input6Placeholder: 'ADDRESS',
         section6Submit: 'SEND',
+
+        footerDevelopedBy: 'Developed by '
       },
       es: {
-        welcome:
-          "¡Bienvenido al portal GeeksforGeeks! " +
-          "¡Puedes elegir cualquier idioma usando " +
-          "los botones de arriba!",
         section1Title: 'Sobre nosotros',
         section2Title: 'Proyectos',
         section3Title: 'Renders',
@@ -119,7 +117,7 @@ function changeLanguage(lang) {
         welcomeSpan3: 'Construcción',
         section1Text: 'ESPA Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
         section2Project1Title: 'Oficina',
-        section2Project1Content: 'ESPA Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
+        section2Project1Content: 'ESPA OFICINA Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
 
         section2Project2Title: 'Sala',
         section2Project2Content: 'ESPA SALA Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
@@ -164,10 +162,11 @@ function changeLanguage(lang) {
         section6Input4Placeholder: 'Correo Electrónico',
         section6Input5Placeholder: 'Tipo de proyecto',
         section6Input5Option1:'ESP LOREM 1',
-        section6Input5Option1: 'ESP LOREM 2',
+        section6Input5Option2: 'ESP LOREM 2',
         section6Input6Placeholder: 'Dirección',
         section6Submit: 'Enviar',
 
+        footerDevelopedBy: 'Desarrollado por '
 
 
       }
@@ -180,6 +179,74 @@ function changeLanguage(lang) {
       // Set the content of the webpage
       // depending on the hash value
       if (window.location.hash == "#es") {
+        $('.section1Title').text(language.es.section1Title);
+        $('.section2Title').text(language.es.section2Title);
+        $('.section3Title').text(language.es.section3Title);
+        $('.section4Title').text(language.es.section4Title);
+        $('.section5Title').text(language.es.section5Title);
+        $('.section6Title').text(language.es.section6Title);
+        $('.section7Title').text(language.es.section7Title);
+
+        $('#welcome-span-1').text(language.es.welcomeSpan1);
+        $('#welcome-span-2').text(language.es.welcomeSpan2);
+        $('#welcome-span-3').text(language.es.welcomeSpan3);
+
+        $('#about-text').text(language.es.section1Text);
+
+        $('.project-1-title').text(language.es.section2Project1Title);
+        $('.project-1-content').text(language.es.section2Project1Content);
+        $('.project-2-title').text(language.es.section2Project2Title);
+        $('.project-2-content').text(language.es.section2Project2Content);
+        $('.project-3-title').text(language.es.section2Project3Title);
+        $('.project-3-content').text(language.es.section2Project3Content);
+        $('.project-4-title').text(language.es.section2Project4Title);
+        $('.project-4-content').text(language.es.section2Project4Content);
+
+        $('.render-1-content').text(language.es.section3Render1);
+        $('.render-2-content').text(language.es.section3Render2);
+        $('.render-3-content').text(language.es.section3Render3);
+        $('.render-4-content').text(language.es.section3Render4);
+        $('.render-5-content').text(language.es.section3Render5);
+
+        $('.product-1-title').text(language.es.section4Product1Title);
+        $('.product-1-content').text(language.es.section4Product1Content);
+
+        $('.product-2-title').text(language.es.section4Product2Title);
+        $('.product-2-content').text(language.es.section4Product2Content);
+
+        $('.product-3-title').text(language.es.section4Product3Title);
+        $('.product-3-content').text(language.es.section4Product3Content);
+
+        $('.product-4-title').text(language.es.section4Product4Title);
+        $('.product-4-content').text(language.es.section4Product4Content);
+
+        $('.product-5-title').text(language.es.section4Product5Title);
+        $('.product-5-content').text(language.es.section4Product5Content);
+
+        $('.product-6-title').text(language.es.section4Product6Title);
+        $('.product-6-content').text(language.es.section4Product6Content);
+
+        $('#btn-more-products').text(language.es.section4MoreProducts);
+
+        $('#step-1').text(language.es.section5Step1);
+        $('#step-2').text(language.es.section5Step2);
+        $('#step-3').text(language.es.section5Step3);
+        $('#step-4').text(language.es.section5Step4);
+        $('#step-5').text(language.es.section5Step5);
+        $('#step-6').text(language.es.section5Step6);
+        $('#step-7').text(language.es.section5Step7);
+
+        $('#contact-input-1').attr('placeholder',language.es.section6Input1Placeholder);
+        $('#contact-input-2').attr('placeholder',language.es.section6Input2Placeholder);
+        $('#contact-input-3').attr('placeholder',language.es.section6Input3Placeholder);
+        $('#contact-input-4').attr('placeholder',language.es.section6Input4Placeholder);
+        $('#contact-input-5').text(language.es.section6Input5Placeholder);
+        $('#contact-option-1').text(language.es.section6Input5Option1);
+        $('#contact-option-2').text(language.es.section6Input5Option2);
+        $('#contact-input-6').attr('placeholder',language.es.section6Input6Placeholder);
+        $('#contact-submit-btn').val(language.es.section6Submit);
+
+        $('#footer-developed-by').text(language.es.footerDevelopedBy);
       } else if (window.location.hash == "#eng") {
         $('.section1Title').text(language.eng.section1Title);
         $('.section2Title').text(language.eng.section2Title);
@@ -243,6 +310,11 @@ function changeLanguage(lang) {
         $('#contact-input-3').attr('placeholder',language.eng.section6Input3Placeholder);
         $('#contact-input-4').attr('placeholder',language.eng.section6Input4Placeholder);
         $('#contact-input-5').text(language.eng.section6Input5Placeholder);
-        $('#contact-option-1').text(language.eng.section6Input5Option1)
+        $('#contact-option-1').text(language.eng.section6Input5Option1);
+        $('#contact-option-2').text(language.eng.section6Input5Option2);
+        $('#contact-input-6').attr('placeholder',language.eng.section6Input6Placeholder);
+        $('#contact-submit-btn').val(language.eng.section6Submit);
+
+        $('#footer-developed-by').text(language.eng.footerDevelopedBy);
       }
     }
