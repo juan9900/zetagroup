@@ -1,4 +1,6 @@
+
 AOS.init();
+
 const alertPlaceholder = $('#liveAlertPlaceholder')
 var timerCloseAlert;
 
@@ -112,12 +114,20 @@ $('.contact-form').on('submit',(e)=>{
             success: (data) => {
                 console.log(data);
                 $('.contact-form').addClass('d-none');
-                $('#form-submited-text').removeClass('d-none');
+                $('#form-submitted-text-1').removeClass('d-none');
+                $('#form-submitted-text-2').removeClass('d-none');
+
             },
             error: (err) => console.log(err)
         });
     }else{
-        alert('Por favor rellena todos los campos','fill');
+        let message;
+        if (window.location.hash == "#es") {
+            message = 'Por favor rellena todos los campos';
+        }else{
+            message = 'Please fill in all fields'
+        }
+        alert(message,'fill');
         timer = setTimeout(() => {
             $('#liveAlertPlaceholder').fadeOut(500, function(){
                 $(this).empty().show();
@@ -129,6 +139,7 @@ $('.contact-form').on('submit',(e)=>{
 })
 
 const alert = (message, type) => {
+
 
     
     const wrapper = document.createElement('div')

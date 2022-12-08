@@ -35,7 +35,7 @@ function changeLanguage(lang) {
     }
       
     // Define the language reload anchors
-    var language = {
+    const language = {
       eng: {
         welcome:
           "Welcome to the GeeksforGeeks " +
@@ -101,6 +101,8 @@ function changeLanguage(lang) {
         section6Input5Option2: 'ENG LOREM 2',
         section6Input6Placeholder: 'ADDRESS',
         section6Submit: 'SEND',
+        section6Success1: 'Message sent successfully.',
+        section6Success2: "You'll soon receive an answer",
 
         footerDevelopedBy: 'Developed by '
       },
@@ -165,6 +167,8 @@ function changeLanguage(lang) {
         section6Input5Option2: 'ESP LOREM 2',
         section6Input6Placeholder: 'DIRECCIÓN',
         section6Submit: 'ENVIAR',
+        section6Success1: 'Mensaje enviado con éxito.',
+        section6Success2: 'Pronto recibirás una respuesta.',
 
         footerDevelopedBy: 'Desarrollado por '
 
@@ -245,6 +249,8 @@ function changeLanguage(lang) {
         $('#contact-option-2').text(language.es.section6Input5Option2);
         $('#contact-input-6').attr('placeholder',language.es.section6Input6Placeholder);
         $('#contact-submit-btn').val(language.es.section6Submit);
+        $('#form-submitted-text-1').text(language.es.section6Success1);
+        $('#form-submitted-text-2').text(language.es.section6Success2);
 
         $('#footer-developed-by').text(language.es.footerDevelopedBy);
       } else if (window.location.hash == "#eng") {
@@ -314,7 +320,12 @@ function changeLanguage(lang) {
         $('#contact-option-2').text(language.eng.section6Input5Option2);
         $('#contact-input-6').attr('placeholder',language.eng.section6Input6Placeholder);
         $('#contact-submit-btn').val(language.eng.section6Submit);
+        $('#form-submitted-text-1').text(language.eng.section6Success1);
+        $('#form-submitted-text-2').text(language.eng.section6Success2);
+
+
 
         $('#footer-developed-by').text(language.eng.footerDevelopedBy);
       }
     }
+
