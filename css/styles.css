@@ -1461,11 +1461,12 @@ footer {
 
 @media screen and (min-width: 2000px) {
   .projects-container {
-    right: 37%;
+    right: 0%;
+    /* Bajar el right y quitar el transform */
     bottom: 0;
     z-index: 200;
     width: 62%;
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
   }
   .section-title.title-left {
     margin-left: 15%;
@@ -1474,30 +1475,30 @@ footer {
 
 @media screen and (min-width: 2480px) {
   .projects-container {
-    right: 42%;
+    right: 5%;
     bottom: 0;
     z-index: 200;
     width: 54%;
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
   }
 }
 
 @media screen and (min-width: 2800px) {
   .projects-container {
-    right: 48%;
+    right: 25%;
     bottom: 0;
     z-index: 200;
     width: 45%;
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
   }
 }
 
 @media screen and (min-width: 3500px) {
   .projects-container {
-    right: 54%;
+    right: 30%;
     bottom: 0;
     z-index: 200;
     width: 36%;
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
   }
 }
