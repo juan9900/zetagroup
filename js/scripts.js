@@ -1,4 +1,6 @@
 AOS.init();
+const alertPlaceholder = $('#liveAlertPlaceholder')
+var timerCloseAlert;
 
 // $('.product').css('opacity',0);
 $('.render').css('opacity',0);
@@ -57,6 +59,7 @@ const positionProjects = () => {
 
 const selected = $('.selected');
 const optionsContainer = $('.options-container');
+const projectType = $('#project-type');
 
 const optionsList = $('.option');
 
@@ -67,11 +70,102 @@ selected.on('click', () => {
 $(optionsList).each((i,obj) => {
     $(obj).on('click',()=> {
         $(selected).text($(obj).text());
+        $(projectType).val($(obj).text().trim());
+        console.log($(projectType).val());
         $(selected).removeClass('select-placeholder');
         $(optionsContainer).removeClass('active');
     })
 
 })
+
+// Handle form submit
+$('.contact-form').on('submit',(e)=>{
+    const firstName = $('#contact-input-1').val();
+    console.log("🚀 ~ file: scripts.js:106 ~ $ ~ firstName", firstName)
+    const lastName = $('#contact-input-2').val();
+    console.log("🚀 ~ file: scripts.js:108 ~ $ ~ lastName", lastName)
+    const phoneNumber = $('#contact-input-3').val();
+    console.log("🚀 ~ file: scripts.js:110 ~ $ ~ phoneNumber", phoneNumber)
+    const email = $('#contact-input-4').val();
+    console.log("🚀 ~ file: scripts.js:112 ~ $ ~ email", email)
+    const projectType = $('#project-type').val();
+    console.log("🚀 ~ file: scripts.js:114 ~ $ ~ projectType", projectType)
+    const address = $('#contact-input-6').val();
+    console.log("🚀 ~ file: scripts.js:116 ~ $ ~ address", address)
+
+    e.preventDefault();
+
+    if(firstName.trim() != '' && lastName.trim() != '' && phoneNumber.trim() != '' && email.trim() != '' && projectType.trim() != '' && address.trim() != ''){
+        $.ajax({
+            method: 'POST',
+            url: 'https://formsubmit.co/ajax/juanluislauretta@gmail.com',
+            dataType: 'json',
+            accepts: 'application/json',
+            data: {
+                firstName,
+                lastName,
+                phoneNumber,
+                email,
+                projectType,
+                address
+            },
+            success: (data) => {
+                console.log(data);
+                $('.contact-form').addClass('d-none');
+                $('#form-submited-text').removeClass('d-none');
+            },
+            error: (err) => console.log(err)
+        });
+    }else{
+        alert('Por favor rellena todos los campos','fill');
+        timer = setTimeout(() => {
+            $('#liveAlertPlaceholder').fadeOut(500, function(){
+                $(this).empty().show();
+            })
+        },4000)
+    }
+    
+    
+})
+
+const alert = (message, type) => {
+
+    
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible mb-0" role="alert" id="alert">`,
+        `   <div><p class="m-0">${message}</p></div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+    ].join('')
+
+    // const wrapper = 
+    // `<div class="alert alert-${type} alert-dismissible mb-0" role="alert" id="alert">
+    //     <div>${icon}
+    //         <div>
+    //             ${message.forEach(msg => {
+    //                 return message
+    //             })}
+    //         </div>
+    //     </div>
+    //     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    // </div>`
+    
+    
+    
+    if($('#liveAlertPlaceholder').is(':empty')){
+        alertPlaceholder.append(wrapper)
+    }else{
+        //If the event have been saved in less than 3 seconds, then the previous setTimeout will be deleted
+        //so the new alert has its own 3 seconds.
+        clearTimeout(timer);
+        $('#liveAlertPlaceholder').empty();
+        console.log('Emptied');
+        alertPlaceholder.append(wrapper);
+       
+    }
+
+}
 
 
 
@@ -99,6 +193,68 @@ $('.show-products').on('click',function(){
     
 })
 
+
+
+
 $(document).ready(()=>{
     positionProjects();
+
+    $('#contact-input-1').on('input',function(e){
+        var c = this.selectionStart,
+            r = /[^a-z ]/gi,
+            v = $(this).val();
+        if(r.test(v)) {
+            $(this).val(v.replace(r, ''));
+            c--;
+        }
+        this.setSelectionRange(c, c);
+        console.log(e.which);
+    })
+
+    $('#contact-input-2').on('input',function(e){
+        var c = this.selectionStart,
+            r = /[^a-z ]/gi,
+            v = $(this).val();
+        if(r.test(v)) {
+            $(this).val(v.replace(r, ''));
+            c--;
+        }
+        this.setSelectionRange(c, c);
+        console.log(e.which);
+    })
+
+    $('#contact-input-3').on('input',function(e){
+      
+        var c = this.selectionStart,
+            r = /[^+0-9 -]/gi,
+            v = $(this).val();
+        if(r.test(v)) {
+            $(this).val(v.replace(r, ''));
+            c--;
+        }
+        this.setSelectionRange(c, c);
+        console.log(e.which);
+    })
+
+    $('#contact-input-4').on('input',function(e){
+        // var x = e.which || e.keycode;
+        // if(x >= 48 && x <= 57 || x === 107 || x === 8 || x === 16 || x === 61 || x === 32 || x === 173 ){
+        //     console.log($('#contact-input-3').val());
+        //     if($('#contact-input-3').val().includes('+') && (x=== 107 || x === 61)){
+        //         return false;
+        //     }
+        //     return true;
+        // }else{
+        //     return false;
+        // }
+        var c = this.selectionStart,
+            r = /[^a-z0-9.@_]/gi,
+            v = $(this).val();
+        if(r.test(v)) {
+            $(this).val(v.replace(r, ''));
+            c--;
+        }
+        this.setSelectionRange(c, c);
+        console.log(e.which);
+    })
 })

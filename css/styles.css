@@ -663,7 +663,7 @@ img.gray {
 
 form {
   width: 100%;
-  padding: 12rem 0;
+  padding: 5rem 0;
 }
 
 input {
@@ -811,6 +811,11 @@ input[type="radio"] {
 
 .contact-form input[type="submit"]:hover {
   color: rgb(196, 196, 196);
+}
+
+#liveAlertPlaceholder {
+  width: 60%;
+  margin: 0 auto;
 }
 
 /* SECTION CONTACT */
@@ -983,6 +988,18 @@ footer {
 @media screen and (max-width: 769px) {
   .welcome-message span {
     display: none;
+  }
+
+  #liveAlertPlaceholder {
+    width: 90%;
+  }
+
+  .alert-fill {
+    background-color: rgb(98, 98, 98);
+  }
+
+  .alert-fill p {
+    color: #fff;
   }
 }
 
