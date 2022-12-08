@@ -156,15 +156,15 @@ function changeLanguage(lang) {
         section5Step6:'Firma del contrato',
         section5Step7:'Ejecución del proyecto',
 
-        section6Input1Placeholder: 'Nombre',
-        section6Input2Placeholder: 'Apellido',
-        section6Input3Placeholder: 'Número Telefónico',
-        section6Input4Placeholder: 'Correo Electrónico',
-        section6Input5Placeholder: 'Tipo de proyecto',
+        section6Input1Placeholder: 'NOMBRE ',
+        section6Input2Placeholder: 'APELLIDO',
+        section6Input3Placeholder: 'NÚMERO TELEFÓNICO',
+        section6Input4Placeholder: 'CORREO ELECTRÓNICO',
+        section6Input5Placeholder: 'TIPO DE PROYECTO',
         section6Input5Option1:'ESP LOREM 1',
         section6Input5Option2: 'ESP LOREM 2',
-        section6Input6Placeholder: 'Dirección',
-        section6Submit: 'Enviar',
+        section6Input6Placeholder: 'DIRECCIÓN',
+        section6Submit: 'ENVIAR',
 
         footerDevelopedBy: 'Desarrollado por '
 

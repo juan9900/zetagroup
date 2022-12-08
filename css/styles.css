@@ -532,7 +532,7 @@ img.gray {
 }
 
 .show-products.show + .hidden-products {
-  max-height: 1300px;
+  max-height: 1500px;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
 }
 
