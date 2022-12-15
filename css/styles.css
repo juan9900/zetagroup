@@ -35,6 +35,14 @@ html {
   src: url("../assets/fonts/INDIAN\ TYPE\ FOUNDRY\ -\ AKHANDSOFT-SEMILIGHT.OTF");
 }
 
+.alert-fill {
+  background-color: rgb(98, 98, 98);
+}
+
+.alert-fill p {
+  color: #fff;
+}
+
 body {
   font-family: Akhandsoft-Semilight;
 }
@@ -607,6 +615,7 @@ img.gray {
 }
 .step-icon img {
   max-width: 6rem;
+  padding-top: 0.5rem;
 }
 
 .second-row {
@@ -993,14 +1002,6 @@ footer {
   #liveAlertPlaceholder {
     width: 90%;
   }
-
-  .alert-fill {
-    background-color: rgb(98, 98, 98);
-  }
-
-  .alert-fill p {
-    color: #fff;
-  }
 }
 
 @media screen and (max-width: 1399px) {
@@ -1306,6 +1307,10 @@ footer {
     height: 2rem;
     margin-bottom: 0;
     display: block;
+  }
+
+  .step-icon img {
+    padding-top: 0.5rem;
   }
 
   .arrow,

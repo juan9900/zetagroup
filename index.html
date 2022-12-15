@@ -402,12 +402,12 @@
     <section class="section-quotation" id="section-quotation">
       <div class=" d-flex flex-xxl-row flex-column justify-content-start align-items-center position-relative">
         <h2 class="section-title title-left section6Title">cotización</h2>
-        <div class="d-flex flex-column w-100 align-items-center">
+        <div class="d-flex flex-column w-100 align-items-center" id="form-container">
           <div class="row m-auto w-100">
             <div class="" id="liveAlertPlaceholder"></div>
           </div>
 
-          <form class="contact-form">
+          <form class="contact-form ">
             <div class="container text-center">
               <div class="row m-auto">
                 <div class="col col-xxl-4 col-8 offset-2">
@@ -453,8 +453,11 @@
           </form>
         </div>
 
-        <h2 id="form-submitted-text-1" class="text-center pt-2 pb-0 d-none m-0">Mensaje enviado con éxito.</h2>
-        <h2 id="form-submitted-text-2" class="text-center  pb-5 pt-0 d-none m-0">Pronto recibirás una respuesta.</h2>
+        <div class="d-flex flex-column justify-content-center align-items-center w-75 d-none" id="form-success-container">
+          <h2 id="form-submitted-text-1" class="text-center pt-2 pb-0 m-0">Mensaje enviado con éxito.</h2>
+          <h2 id="form-submitted-text-2" class="text-center  pb-5 pt-0 m-0">Pronto recibirás una respuesta.</h2>
+        </div>
+
 
       </div>
     </section>

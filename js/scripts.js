@@ -113,9 +113,8 @@ $('.contact-form').on('submit',(e)=>{
             },
             success: (data) => {
                 console.log(data);
-                $('.contact-form').addClass('d-none');
-                $('#form-submitted-text-1').removeClass('d-none');
-                $('#form-submitted-text-2').removeClass('d-none');
+                $('#form-container').addClass('d-none');
+                $('#form-success-container').removeClass('d-none');
 
             },
             error: (err) => console.log(err)
