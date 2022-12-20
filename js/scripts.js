@@ -11,7 +11,9 @@ const projects = $('.project');
 
 const projects2 = document.querySelectorAll('.project');
 
+const projectsButtons = $('.project-button');
 
+const projectsImages = $('.project-img');
 
 let prevProject = projects.length - 1;
 const disableProjects = (current) => {
@@ -35,8 +37,9 @@ const disableProjects = (current) => {
 }
 
 const positionProjects = () => {
+    
     current = projects.length - 1;
-    var right = 30;
+    var right = 20;
     var zindex = 190;
     $('.project').each(function(i,obj){
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
@@ -49,10 +52,12 @@ const positionProjects = () => {
         $(this).on('mouseleave', () => {
             $(this).removeClass('project-active');
         })
-        right-=10;
+        right-=6.7;
         zindex += 1;
     })
 }
+
+
 
 
 
@@ -204,10 +209,77 @@ $('.show-products').on('click',function(){
 })
 
 
+const changeSrc = async (section) => {
+    await $('.project-img').each(function(index){
+        $(this).attr('src',`/assets/img/project-${section}-${index+1}.jpg`);
+    });
+}
 
+
+
+
+$(function(){
+    
+    $('.project-img').hide().promise().done(function(){
+        console.log('finished hiding scripts 231')
+        console.log("🚀 ~ file: scripts.js:232 ~ $ ~ 231", 231)
+    })
+    $('.project-kitchen').fadeIn().promise().done(function(){
+        console.log("finished showing kitchen scripts 235");
+        console.log("  235");
+    });
+})
 
 $(document).ready(()=>{
     positionProjects();
+    
+    const removeActive = () => {
+        $('.project-button').each(function () {
+            $(this).removeClass('active');
+        })
+    }
+    // KITCHEN PROJECTS
+    $('#btn-projects-1').on('click', function(){
+        if(!$(this).hasClass('active')){
+            removeActive();
+            $("#btn-projects-1").addClass("active");
+            $('.project-office').stop(true,true).hide();
+            $('.project-kitchen').hide();
+            $('.project-living').hide();
+            $('.project-kitchen').fadeIn(500);
+            
+        }
+        
+    })
+    
+    // OFFICE PROJECTS
+    $('#btn-projects-2').on('click', function() {
+        if(!$(this).hasClass('active')){
+            removeActive();
+            $("#btn-projects-2").addClass("active");
+            $('.project-kitchen').stop(true,true).hide();
+            $('.project-office').hide();
+            $('.project-living').hide();
+            $('.project-office').fadeIn(500);
+            
+            
+            
+        }
+        
+    })
+    
+    // LIVING ROOM PROJECTS
+    $('#btn-projects-3').on('click', function(){
+        if(!$(this).hasClass('active')){
+            removeActive();
+            $("#btn-projects-3").addClass("active");
+            $('.project-kitchen').stop(true,true).hide();
+            $('.project-office').hide();
+            $('.project-living').hide();
+            $('.project-living').fadeIn(500);
+            
+        }
+    })
 
     $('#contact-input-1').on('input',function(e){
         var c = this.selectionStart,
