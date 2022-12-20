@@ -104,47 +104,45 @@ var waypointAbout = new Waypoint({
 
 
 // PROJECTS
+const projectsSection = $('.section-projects');
+let projectsAnimation = $('.project');
+var waypointProjects = new Waypoint({
+    element: projectsSection,
+    handler: function(direction) {
+      if(width > 1024){
+        setTimeout(()=> {
+          $(projectsAnimation[3]).css('opacity',1);
+          $(projectsAnimation[3]).addClass('animate__fadeInRight');
+          setTimeout(()=> {
+              $(projectsAnimation[2]).css('opacity',1);
+              $(projectsAnimation[2]).addClass('animate__fadeInRight');
+              console.log(2);
+              setTimeout(()=> {
+                  $(projectsAnimation[1]).css('opacity',1);
+                  $(projectsAnimation[1]).addClass('animate__fadeInRight');
+                  console.log(3);
+                  setTimeout(()=> {
+                      $(projectsAnimation[0]).css('opacity',1);
+                      $(projectsAnimation[0]).addClass('animate__fadeInRight');
+                      console.log(4);
+                    },150);
+                },100);
+            },50);
+        },0);
+      }else{
+        $('.projects-container').addClass('animate__animated animate__fadeInRight');
+        $(project1).css('opacity',1);
+        $(project2).css('opacity',1);
+        $(project3).css('opacity',1);
+        $(project4).css('opacity',1);
 
-
-// const projectsSection = $('.section-projects');
-// let projectsAnimation = $('.project');
-// var waypointProjects = new Waypoint({
-//     element: projectsSection,
-//     handler: function(direction) {
-//       if(width > 1024){
-//         setTimeout(()=> {
-//           // $(projectsAnimation[3]).css('opacity',1);
-//           $(projectsAnimation[3]).addClass('animate__fadeInRight');
-//           setTimeout(()=> {
-//               // $(projectsAnimation[2]).css('opacity',1);
-//               $(projectsAnimation[2]).addClass('animate__fadeInRight');
-//               console.log(2);
-//               setTimeout(()=> {
-//                   // $(projectsAnimation[1]).css('opacity',1);
-//                   $(projectsAnimation[1]).addClass('animate__fadeInRight');
-//                   console.log(3);
-//                   setTimeout(()=> {
-//                       // $(projectsAnimation[0]).css('opacity',1);
-//                       $(projectsAnimation[0]).addClass('animate__fadeInRight');
-//                       console.log(4);
-//                     },150);
-//                 },100);
-//             },50);
-//         },0);
-//       }else{
-//         $('.projects-container').addClass('animate__animated animate__fadeInRight');
-//         // $(project1).css('opacity',1);
-//         // $(project2).css('opacity',1);
-//         // $(project3).css('opacity',1);
-//         // $(project4).css('opacity',1);
-
-//       }
+      }
       
-//       console.log('scrolled to projects');
-//     //   $('.project').addClass('animate__backInRight');
-//     },
-//     offset: 800
-//   })
+      console.log('scrolled to projects');
+    //   $('.project').addClass('animate__backInRight');
+    },
+    offset: 800
+  })
 
 
 // RENDERS

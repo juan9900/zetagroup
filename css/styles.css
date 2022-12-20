@@ -335,7 +335,7 @@ body {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   transition: filter 0.3s linear;
-  opacity: 1;
+  opacity: 0;
 }
 
 .project.project-active {

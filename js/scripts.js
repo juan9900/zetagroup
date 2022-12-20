@@ -220,19 +220,20 @@ const changeSrc = async (section) => {
 
 $(function(){
     
-    $('.project-img').hide().promise().done(function(){
-        console.log('finished hiding scripts 231')
-        console.log("🚀 ~ file: scripts.js:232 ~ $ ~ 231", 231)
-    })
-    $('.project-kitchen').fadeIn().promise().done(function(){
-        console.log("finished showing kitchen scripts 235");
-        console.log("  235");
-    });
+    // $('.project-img').hide().promise().done(function(){
+    //     console.log('finished hiding scripts 231')
+    //     console.log("🚀 ~ file: scripts.js:232 ~ $ ~ 231", 231)
+    // })
+    // $('.project-kitchen').fadeIn().promise().done(function(){
+    //     console.log("finished showing kitchen scripts 235");
+    //     console.log("  235");
+    // });
 })
 
 $(document).ready(()=>{
     positionProjects();
-    
+    $('.project-office').hide();
+    $('.project-living').hide();
     const removeActive = () => {
         $('.project-button').each(function () {
             $(this).removeClass('active');
@@ -243,57 +244,42 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActive();
             $("#btn-projects-1").addClass("active");
-            $('.project-office').animate({opacity:0},500,function(){
-                $('.project-office').hide(500);
-            });
-            $(".project-living").animate({ opacity: 0 },500,function(){
-                $('.project-living').hide(500);
-            });
-            $('.project-kitchen').show(1000);
-            $('.project-kitchen').animate({opacity:1},600);
-            
+            $('.project-kitchen').removeClass('animate__fadeIn animate__animated')
+            $('.project-living').hide();
+            $('.project-office').hide();
+            $('.project-kitchen').show();
+            $('.project-kitchen').addClass('animate__fadeIn animate__animated')
+
         }
         
     })
     
     // OFFICE PROJECTS
     $('#btn-projects-2').on('click', function() {
+        console.log('office section');
         if(!$(this).hasClass('active')){
             removeActive();
             $("#btn-projects-2").addClass("active");
-            // $('.project-kitchen').stop(true,true).hide();
-            // $('.project-office').hide('slow');
-            // $('.project-living').hide('slow');
-            // $('.project-office').show(400)
-            $('.project-kitchen').animate({opacity:0},500,function(){
-                $('.project-kitchen').hide(500);
-            });
-            $(".project-living").animate({ opacity: 0 },500,function(){
-                $('.project-living').hide(500);
-            });
-            $('.project-office').show(1000);
-            $('.project-office').animate({opacity:1},600);
-            
-            
+            $('.project-office').removeClass('animate__fadeIn animate__animated')
+            $('.project-kitchen').hide();
+            $('.project-living').hide();
+            $('.project-office').show();
+            $('.project-office').addClass('animate__fadeIn animate__animated')
             
         }
         
     })
-    
     // LIVING ROOM PROJECTS
-    $('#btn-projects-3').on('click', function(){
+    $('#btn-projects-3').on('click', function (){
         if(!$(this).hasClass('active')){
             removeActive();
             $("#btn-projects-3").addClass("active");
-            $('.project-office').animate({opacity:0},500,function(){
-                $('.project-office').hide(500);
-            });
-            $(".project-kitchen").animate({ opacity: 0 },500,function(){
-                $('.project-kitchen').hide(500);
-            });
-            $('.project-living').show(1000);
-            $('.project-living').animate({opacity:1},600);
-            
+            $('.project-living').removeClass('animate__fadeIn animate__animated')
+            $('.project-kitchen').hide();
+            $('.project-office').hide();
+            $('.project-living').show();
+            $('.project-living').addClass('animate__fadeIn animate__animated')
+
         }
     })
 
