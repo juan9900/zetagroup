@@ -243,10 +243,14 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActive();
             $("#btn-projects-1").addClass("active");
-            $('.project-office').stop(true,true).hide();
-            $('.project-kitchen').hide();
-            $('.project-living').hide();
-            $('.project-kitchen').fadeIn(500);
+            $('.project-office').animate({opacity:0},500,function(){
+                $('.project-office').hide(500);
+            });
+            $(".project-living").animate({ opacity: 0 },500,function(){
+                $('.project-living').hide(500);
+            });
+            $('.project-kitchen').show(1000);
+            $('.project-kitchen').animate({opacity:1},600);
             
         }
         
@@ -257,10 +261,18 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActive();
             $("#btn-projects-2").addClass("active");
-            $('.project-kitchen').stop(true,true).hide();
-            $('.project-office').hide();
-            $('.project-living').hide();
-            $('.project-office').fadeIn(500);
+            // $('.project-kitchen').stop(true,true).hide();
+            // $('.project-office').hide('slow');
+            // $('.project-living').hide('slow');
+            // $('.project-office').show(400)
+            $('.project-kitchen').animate({opacity:0},500,function(){
+                $('.project-kitchen').hide(500);
+            });
+            $(".project-living").animate({ opacity: 0 },500,function(){
+                $('.project-living').hide(500);
+            });
+            $('.project-office').show(1000);
+            $('.project-office').animate({opacity:1},600);
             
             
             
@@ -273,10 +285,14 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActive();
             $("#btn-projects-3").addClass("active");
-            $('.project-kitchen').stop(true,true).hide();
-            $('.project-office').hide();
-            $('.project-living').hide();
-            $('.project-living').fadeIn(500);
+            $('.project-office').animate({opacity:0},500,function(){
+                $('.project-office').hide(500);
+            });
+            $(".project-kitchen").animate({ opacity: 0 },500,function(){
+                $('.project-kitchen').hide(500);
+            });
+            $('.project-living').show(1000);
+            $('.project-living').animate({opacity:1},600);
             
         }
     })
