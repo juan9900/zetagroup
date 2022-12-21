@@ -216,6 +216,7 @@ $(document).ready(()=>{
     positionProjects();
     $('.project-office').hide();
     $('.project-living').hide();
+    $('.project-bath').hide();
     const removeActiveProjects = () => {
         $('.project-button').each(function () {
             $(this).removeClass('active');
@@ -233,6 +234,7 @@ $(document).ready(()=>{
             $("#btn-projects-1").addClass("active");
             $('.project-kitchen').removeClass('animate__fadeIn animate__animated')
             $('.project-living').hide();
+            $('.project-bath').hide();
             $('.project-office').hide();
             $('.project-kitchen').show();
             $('.project-kitchen').addClass('animate__fadeIn animate__animated')
@@ -248,6 +250,7 @@ $(document).ready(()=>{
             removeActiveProjects();
             $("#btn-projects-2").addClass("active");
             $('.project-office').removeClass('animate__fadeIn animate__animated')
+            $('.project-bath').hide();
             $('.project-kitchen').hide();
             $('.project-living').hide();
             $('.project-office').show();
@@ -263,9 +266,25 @@ $(document).ready(()=>{
             $("#btn-projects-3").addClass("active");
             $('.project-living').removeClass('animate__fadeIn animate__animated')
             $('.project-kitchen').hide();
+            $('.project-bath').hide();
             $('.project-office').hide();
             $('.project-living').show();
             $('.project-living').addClass('animate__fadeIn animate__animated')
+
+        }
+    })
+
+    // BATHROOM PROJECTS
+    $('#btn-projects-4').on('click', function (){
+        if(!$(this).hasClass('active')){
+            removeActiveProjects();
+            $("#btn-projects-4").addClass("active");
+            $('.project-bath').removeClass('animate__fadeIn animate__animated')
+            $('.project-kitchen').hide();
+            $('.project-office').hide();
+            $(".project-living").hide();
+            $('.project-bath').show();
+            $('.project-bath').addClass('animate__fadeIn animate__animated')
 
         }
     })
