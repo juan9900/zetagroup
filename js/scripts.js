@@ -16,12 +16,13 @@ const projectsButtons = $('.project-button');
 const projectsImages = $('.project-img');
 
 let prevProject = projects.length - 1;
+
 const disableProjects = (current) => {
     var zindex = 100;
     $('.project').each(function(i,obj){
         
         $(this).removeClass('project-active');
-        if(i != current){
+        if(i+1 != current){
             $(this).css('z-index',`${zindex}`);
         }
         
@@ -39,12 +40,13 @@ const disableProjects = (current) => {
 const positionProjects = () => {
     
     current = projects.length - 1;
-    var right = 20;
+    var right = 26;
     var zindex = 190;
     $('.project').each(function(i,obj){
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
         $(this).on('mouseover', () => {
             current = i;
+            console.log(current);
             disableProjects(current);
             $(this).addClass('project-active');
             $(this).css('z-index','1000');
@@ -218,9 +220,8 @@ $(document).ready(()=>{
     $('.project-living').hide();
     $('.project-bath').hide();
     const removeActiveProjects = () => {
-        $('.project-button').each(function () {
-            $(this).removeClass('active');
-        })
+        $('.project-button').removeClass('active');
+        $('.project-section-indicator').removeClass('first second third fourth');
     }
 
     const removeActiveRenders = () => {
@@ -231,13 +232,14 @@ $(document).ready(()=>{
     $('#btn-projects-1').on('click', function(){
         if(!$(this).hasClass('active')){
             removeActiveProjects();
+            $('.project-section-indicator').addClass('first');
             $("#btn-projects-1").addClass("active");
-            $('.project-kitchen').removeClass('animate__fadeIn animate__animated')
+            $('.project-kitchen').removeClass('animate__fadeIn animate__animated animate__slow')
             $('.project-living').hide();
             $('.project-bath').hide();
             $('.project-office').hide();
             $('.project-kitchen').show();
-            $('.project-kitchen').addClass('animate__fadeIn animate__animated')
+            $('.project-kitchen').addClass('animate__fadeIn animate__animated animate__slow')
 
         }
         
@@ -248,13 +250,14 @@ $(document).ready(()=>{
         console.log('office section');
         if(!$(this).hasClass('active')){
             removeActiveProjects();
+            $('.project-section-indicator').addClass('second');
             $("#btn-projects-2").addClass("active");
-            $('.project-office').removeClass('animate__fadeIn animate__animated')
+            $('.project-office').removeClass('animate__fadeIn animate__animated animate__slow')
             $('.project-bath').hide();
             $('.project-kitchen').hide();
             $('.project-living').hide();
             $('.project-office').show();
-            $('.project-office').addClass('animate__fadeIn animate__animated')
+            $('.project-office').addClass('animate__fadeIn animate__animated animate__slow')
             
         }
         
@@ -263,13 +266,14 @@ $(document).ready(()=>{
     $('#btn-projects-3').on('click', function (){
         if(!$(this).hasClass('active')){
             removeActiveProjects();
+            $('.project-section-indicator').addClass('third');
             $("#btn-projects-3").addClass("active");
-            $('.project-living').removeClass('animate__fadeIn animate__animated')
+            $('.project-living').removeClass('animate__fadeIn animate__animated animate__slow')
             $('.project-kitchen').hide();
             $('.project-bath').hide();
             $('.project-office').hide();
             $('.project-living').show();
-            $('.project-living').addClass('animate__fadeIn animate__animated')
+            $('.project-living').addClass('animate__fadeIn animate__animated animate__slow')
 
         }
     })
@@ -278,13 +282,14 @@ $(document).ready(()=>{
     $('#btn-projects-4').on('click', function (){
         if(!$(this).hasClass('active')){
             removeActiveProjects();
+            $('.project-section-indicator').addClass('fourth');
             $("#btn-projects-4").addClass("active");
-            $('.project-bath').removeClass('animate__fadeIn animate__animated')
+            $('.project-bath').removeClass('animate__fadeIn animate__animated animate__slow')
             $('.project-kitchen').hide();
             $('.project-office').hide();
             $(".project-living").hide();
             $('.project-bath').show();
-            $('.project-bath').addClass('animate__fadeIn animate__animated')
+            $('.project-bath').addClass('animate__fadeIn animate__animated animate__slow')
 
         }
     })

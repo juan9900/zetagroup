@@ -286,6 +286,58 @@ body {
   margin-top: 10rem;
 }
 
+.projects-list-container {
+  width: 7%;
+  background-color: #fff;
+}
+
+.projects-list {
+  margin: 0;
+  width: 100%;
+}
+
+.project-button {
+  letter-spacing: 0.6px;
+  margin: 0.5rem 0;
+  font-size: 1.4em;
+  cursor: pointer;
+  background: #fff;
+  color: var(--primary);
+  padding: 0.3rem 1rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.project-button:hover {
+  color: rgb(29, 29, 29);
+}
+
+.project-button.active {
+  color: rgb(29, 29, 29);
+}
+
+.project-section-indicator {
+  width: 5px;
+  height: 20%;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  margin: 5% 0;
+  transition: all 0.2s linear;
+}
+
+.project-section-indicator.first {
+  top: 0%;
+}
+.project-section-indicator.second {
+  top: 25%;
+}
+.project-section-indicator.third {
+  top: 50%;
+}
+.project-section-indicator.fourth {
+  top: 75%;
+}
+
 .project-img {
   width: 100%;
   right: 0;
@@ -308,26 +360,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: 200;
-  width: 75%;
+  width: 69%;
   transition: opacity 0.3s ease-in-out;
-}
-
-.project-button {
-  letter-spacing: 0.6px;
-  margin: 0.5rem 0;
-  font-size: 1.4em;
-  cursor: pointer;
-  background: #efefef;
-  padding: 0.3rem 1rem;
-  transition: background 0.2s ease-in-out;
-}
-
-.project-button:hover {
-  background: #d4d4d4;
-}
-
-.project-button.active {
-  background: #d4d4d4;
 }
 
 .project {
@@ -353,6 +387,7 @@ body {
   padding: 1rem 3rem;
   opacity: 0;
   transition: opacity 0.1s linear;
+  z-index: 1;
 }
 
 .project-description h3 {
@@ -373,7 +408,7 @@ body {
 .section-renders {
   background-color: var(--primary);
   margin-top: 1rem;
-  padding-top: 10rem;
+  padding-top: 12rem;
   padding-bottom: 7rem;
 }
 
@@ -386,7 +421,7 @@ body {
   margin: 0 auto;
 }
 .renders-list {
-  background: rgb(223, 223, 223);
+  background: var(--primary);
   width: 100%;
   padding: 0;
 }
@@ -404,7 +439,7 @@ body {
 .section-indicator {
   height: 4px;
   width: 25%;
-  background: rgb(29, 29, 29);
+  background: rgb(240, 240, 240);
   position: absolute;
   bottom: 0;
   margin: 0;
@@ -433,22 +468,22 @@ body {
 
 .renders-list li {
   text-align: center;
-  color: rgb(72, 72, 72);
+  color: #fff;
   padding: 0 1.2rem 0.3rem 1.2rem;
   font-size: 1.5em;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.15s ease-in-out;
-  background-color: rgb(223, 223, 223);
+  background-color: var(--primary);
   width: 25%;
 }
 
 .renders-list li:hover {
-  color: rgb(29, 29, 29);
+  color: rgb(162, 162, 162);
 }
 
 .renders-list li.active {
-  color: rgb(29, 29, 29);
+  color: #fff;
 }
 .renders-container {
   /* grid-template-columns: repeat(3, 1fr);
