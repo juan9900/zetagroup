@@ -52,7 +52,7 @@ const positionProjects = () => {
         $(this).on('mouseleave', () => {
             $(this).removeClass('project-active');
         })
-        right-=6.7;
+        right-=6.8;
         zindex += 1;
     })
 }
@@ -209,40 +209,27 @@ $('.show-products').on('click',function(){
 })
 
 
-const changeSrc = async (section) => {
-    await $('.project-img').each(function(index){
-        $(this).attr('src',`/assets/img/project-${section}-${index+1}.jpg`);
-    });
-}
 
 
-
-
-$(function(){
-    
-    // $('.project-img').hide().promise().done(function(){
-    //     console.log('finished hiding scripts 231')
-    //     console.log("🚀 ~ file: scripts.js:232 ~ $ ~ 231", 231)
-    // })
-    // $('.project-kitchen').fadeIn().promise().done(function(){
-    //     console.log("finished showing kitchen scripts 235");
-    //     console.log("  235");
-    // });
-})
 
 $(document).ready(()=>{
     positionProjects();
     $('.project-office').hide();
     $('.project-living').hide();
-    const removeActive = () => {
+    const removeActiveProjects = () => {
         $('.project-button').each(function () {
             $(this).removeClass('active');
         })
     }
+
+    const removeActiveRenders = () => {
+        $('.btn-render').removeClass('active');
+    }
+
     // KITCHEN PROJECTS
     $('#btn-projects-1').on('click', function(){
         if(!$(this).hasClass('active')){
-            removeActive();
+            removeActiveProjects();
             $("#btn-projects-1").addClass("active");
             $('.project-kitchen').removeClass('animate__fadeIn animate__animated')
             $('.project-living').hide();
@@ -258,7 +245,7 @@ $(document).ready(()=>{
     $('#btn-projects-2').on('click', function() {
         console.log('office section');
         if(!$(this).hasClass('active')){
-            removeActive();
+            removeActiveProjects();
             $("#btn-projects-2").addClass("active");
             $('.project-office').removeClass('animate__fadeIn animate__animated')
             $('.project-kitchen').hide();
@@ -272,7 +259,7 @@ $(document).ready(()=>{
     // LIVING ROOM PROJECTS
     $('#btn-projects-3').on('click', function (){
         if(!$(this).hasClass('active')){
-            removeActive();
+            removeActiveProjects();
             $("#btn-projects-3").addClass("active");
             $('.project-living').removeClass('animate__fadeIn animate__animated')
             $('.project-kitchen').hide();
@@ -282,6 +269,81 @@ $(document).ready(()=>{
 
         }
     })
+
+    $('#btn-render-1').on('click', function (){
+        if(!$(this).hasClass('active')){
+            removeActiveRenders();
+            $(this).addClass('active');
+            $('.section-indicator').removeClass('second third fourth')
+            $('.section-indicator').addClass('first');
+            $('.color').fadeOut(function(){
+                $('.color').each(function(index){
+                    $(this).attr('src',`/assets/img/render3.jpg`);
+                })
+                $('.gray').each(function(index){
+                    $(this).attr('src',`/assets/img/render3.jpg`);
+                })
+            });
+            $('.color').fadeIn(); 
+        }
+    });
+
+    $('#btn-render-2').on('click', function (){
+        if(!$(this).hasClass('active')){
+            removeActiveRenders();
+            $(this).addClass('active');
+            $('.section-indicator').removeClass('first third fourth')
+            $('.section-indicator').addClass('second');
+            $('.color').fadeOut(function(){
+                $('.color').each(function(index){
+                    $(this).attr('src',`/assets/img/render5.jpg`);
+                })
+                $('.gray').each(function(index){
+                    $(this).attr('src',`/assets/img/render5.jpg`);
+                })
+            });
+            $('.color').fadeIn(); 
+
+        }
+    });
+
+    $('#btn-render-3').on('click', function (){
+        if(!$(this).hasClass('active')){
+            removeActiveRenders();
+            $(this).addClass('active');
+            $('.section-indicator').removeClass('first second fourth')
+            $(".section-indicator").addClass("third");
+            $('.color').fadeOut(function(){
+                $('.color').each(function(index){
+                    $(this).attr('src',`/assets/img/render4.jpg`);
+                })
+                $('.gray').each(function(index){
+                    $(this).attr('src',`/assets/img/render4.jpg`);
+                })
+            });
+            $('.color').fadeIn(); 
+        }
+    });
+
+    $('#btn-render-4').on('click', function () {
+        if(!$(this).hasClass('active')){
+            removeActiveRenders();
+            $(this).addClass('active');
+            $('.section-indicator').removeClass('first second third')
+            $(".section-indicator").addClass("fourth");
+            $('.color').fadeOut(function(){
+                $('.color').each(function(index){
+                    $(this).attr('src',`/assets/img/render1.jpg`);
+                })
+                $('.gray').each(function(index){
+                    $(this).attr('src',`/assets/img/render1.jpg`);
+                })
+            });
+            $('.color').fadeIn(); 
+        }
+    })
+
+
 
     $('#contact-input-1').on('input',function(e){
         var c = this.selectionStart,
