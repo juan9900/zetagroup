@@ -40,7 +40,7 @@ const disableProjects = (current) => {
 const positionProjects = () => {
     
     current = projects.length - 1;
-    var right = 26;
+    var right = -1;
     var zindex = 190;
     $('.project').each(function(i,obj){
         $(this).css({'right': `${right}%`,'z-index':`${zindex}`});
@@ -54,10 +54,83 @@ const positionProjects = () => {
         $(this).on('mouseleave', () => {
             $(this).removeClass('project-active');
         })
-        right-=6.8;
+        right+=6.8;
         zindex += 1;
     })
 }
+
+// PRODUCTS SECTION
+
+$('#btn-submit-form-product').on('click', () => {
+    $("#product-form").submit();
+})
+
+$('#product-form').on('submit',function(e){
+    const infoFullName = $('#formInfoName').val();
+    console.log("🚀 ~ file: scripts.js:70 ~ $ ~ infoFullName", infoFullName)
+    const infoPhoneNumber = $('#formInfoPhone').val();
+    console.log("🚀 ~ file: scripts.js:72 ~ $ ~ infoPhoneNumber", infoPhoneNumber)
+    const infoEmail = $('#formInfoEmail').val();
+    console.log("🚀 ~ file: scripts.js:74 ~ $ ~ infoEmail", infoEmail)
+    const infoProduct = $('#formInfoProduct').val();
+    console.log("🚀 ~ file: scripts.js:76 ~ $ ~ infoProduct", infoProduct)
+    const infoMessage = $("#formInfoMsg").val();
+    console.log("🚀 ~ file: scripts.js:78 ~ $ ~ infoMessage", infoMessage)
+
+    e.preventDefault();
+
+    
+    if(infoFullName.trim() != '' && infoPhoneNumber.trim() != '' && infoEmail.trim() != '' && infoProduct.trim() != '' && infoMessage.trim() != ''){
+        if ((infoPhoneNumber.length !== 11 && infoPhoneNumber.length !== 10)) {
+            let message;
+        if (window.location.hash == "#es") {
+            message = 'Por favor verifica el número telefónico ingresado';
+        }else{
+            message = 'Please check the number entered'; 
+        }
+        alert(message,'fill','product');
+        timer = setTimeout(() => {
+            $('#liveAlertPlaceholderProduct').fadeOut(500, function(){
+                $(this).empty().show();
+            })
+        },4000)
+        return
+        }
+        $.ajax({
+            method: 'POST',
+            url: 'https://formsubmit.co/ajax/juanluislauretta@gmail.com',
+            dataType: 'json',
+            accepts: 'application/json',
+            data: {
+                'Mensaje':infoMessage,
+                'Nombre':infoFullName,
+                'Número telefónico':infoPhoneNumber,
+                'E-mail':infoEmail,
+                'Producto':infoProduct
+            },
+            success: (data) => {
+                console.log('success');
+                $("#modalGetProduct").modal("hide");
+            },
+            error: (err) => console.log(err)
+        });
+    }else{
+        let message;
+        if (window.location.hash == "#es") {
+            message = 'Por favor rellena todos los campos';
+        }else{
+            message = 'Please fill in all fields'
+        }
+        alert(message,'fill','product');
+        timer = setTimeout(() => {
+            $('#liveAlertPlaceholderProduct').fadeOut(500, function(){
+                $(this).empty().show();
+            })
+        },4000)
+    }
+    
+    
+})
 
 
 
@@ -87,20 +160,16 @@ $(optionsList).each((i,obj) => {
 
 })
 
+
+
 // Handle form submit
 $('.contact-form').on('submit',(e)=>{
     const firstName = $('#contact-input-1').val();
-    console.log("🚀 ~ file: scripts.js:106 ~ $ ~ firstName", firstName)
     const lastName = $('#contact-input-2').val();
-    console.log("🚀 ~ file: scripts.js:108 ~ $ ~ lastName", lastName)
     const phoneNumber = $('#contact-input-3').val();
-    console.log("🚀 ~ file: scripts.js:110 ~ $ ~ phoneNumber", phoneNumber)
     const email = $('#contact-input-4').val();
-    console.log("🚀 ~ file: scripts.js:112 ~ $ ~ email", email)
     const projectType = $('#project-type').val();
-    console.log("🚀 ~ file: scripts.js:114 ~ $ ~ projectType", projectType)
     const address = $('#contact-input-6').val();
-    console.log("🚀 ~ file: scripts.js:116 ~ $ ~ address", address)
 
     e.preventDefault();
 
@@ -133,7 +202,7 @@ $('.contact-form').on('submit',(e)=>{
         }else{
             message = 'Please fill in all fields'
         }
-        alert(message,'fill');
+        alert(message,'fill','contact');
         timer = setTimeout(() => {
             $('#liveAlertPlaceholder').fadeOut(500, function(){
                 $(this).empty().show();
@@ -144,10 +213,14 @@ $('.contact-form').on('submit',(e)=>{
     
 })
 
-const alert = (message, type) => {
+const alert = (message, type, form) => {
+    let alertPlaceholder;
+    if(form === 'product'){
+        alertPlaceholder = $("#liveAlertPlaceholderProduct");
+    }else{
+        alertPlaceholder = $("#liveAlertPlaceholder");
+    }
 
-
-    
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible mb-0" role="alert" id="alert">`,
@@ -170,13 +243,13 @@ const alert = (message, type) => {
     
     
     
-    if($('#liveAlertPlaceholder').is(':empty')){
+    if($(alertPlaceholder).is(':empty')){
         alertPlaceholder.append(wrapper)
     }else{
         //If the event have been saved in less than 3 seconds, then the previous setTimeout will be deleted
         //so the new alert has its own 3 seconds.
         clearTimeout(timer);
-        $('#liveAlertPlaceholder').empty();
+        $(alertPlaceholder).empty();
         console.log('Emptied');
         alertPlaceholder.append(wrapper);
        
@@ -248,8 +321,8 @@ $(document).ready(()=>{
     // OFFICE PROJECTS
     $('#btn-projects-2').on('click', function() {
         console.log('office section');
-        if(!$(this).hasClass('active')){
-            removeActiveProjects();
+        // if(!$(this).hasClass('active')){
+            // removeActiveProjects();
             $('.project-section-indicator').addClass('second');
             $("#btn-projects-2").addClass("active");
             $('.project-office').removeClass('animate__fadeIn animate__animated animate__slow')
@@ -259,7 +332,7 @@ $(document).ready(()=>{
             $('.project-office').show();
             $('.project-office').addClass('animate__fadeIn animate__animated animate__slow')
             
-        }
+        // }
         
     })
     // LIVING ROOM PROJECTS
@@ -298,6 +371,7 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActiveRenders();
             $(this).addClass('active');
+            $('.circle-container').fadeOut();
             $('.section-indicator').removeClass('second third fourth')
             $('.section-indicator').addClass('first');
             $('.color').fadeOut(function(){
@@ -309,6 +383,8 @@ $(document).ready(()=>{
                 })
             });
             $('.color').fadeIn(); 
+            $('.circle-container').fadeIn();
+
         }
     });
 
@@ -316,6 +392,7 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActiveRenders();
             $(this).addClass('active');
+            $('.circle-container').fadeOut();
             $('.section-indicator').removeClass('first third fourth')
             $('.section-indicator').addClass('second');
             $('.color').fadeOut(function(){
@@ -327,6 +404,7 @@ $(document).ready(()=>{
                 })
             });
             $('.color').fadeIn(); 
+            $('.circle-container').fadeIn();
 
         }
     });
@@ -335,6 +413,7 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActiveRenders();
             $(this).addClass('active');
+            $('.circle-container').fadeOut();
             $('.section-indicator').removeClass('first second fourth')
             $(".section-indicator").addClass("third");
             $('.color').fadeOut(function(){
@@ -346,6 +425,7 @@ $(document).ready(()=>{
                 })
             });
             $('.color').fadeIn(); 
+            $('.circle-container').fadeIn();
         }
     });
 
@@ -353,6 +433,7 @@ $(document).ready(()=>{
         if(!$(this).hasClass('active')){
             removeActiveRenders();
             $(this).addClass('active');
+            $('.circle-container').fadeOut();
             $('.section-indicator').removeClass('first second third')
             $(".section-indicator").addClass("fourth");
             $('.color').fadeOut(function(){
@@ -364,12 +445,19 @@ $(document).ready(()=>{
                 })
             });
             $('.color').fadeIn(); 
+            $('.circle-container').fadeIn();
         }
     })
 
 
+    $('.btn-get-product').each(function(index){
+        $(this).on('click',function(){
+            console.log('getting');
+            $('#formInfoProduct').val($(this).attr('data-bs-product'));
+        })
+    })
 
-    $('#contact-input-1').on('input',function(e){
+    function checkName(e){
         var c = this.selectionStart,
             r = /[^a-z ]/gi,
             v = $(this).val();
@@ -379,44 +467,21 @@ $(document).ready(()=>{
         }
         this.setSelectionRange(c, c);
         console.log(e.which);
-    })
+    } 
 
-    $('#contact-input-2').on('input',function(e){
+    function checkPhone(e){
         var c = this.selectionStart,
-            r = /[^a-z ]/gi,
-            v = $(this).val();
-        if(r.test(v)) {
-            $(this).val(v.replace(r, ''));
-            c--;
-        }
-        this.setSelectionRange(c, c);
-        console.log(e.which);
-    })
+        r = /[^+0-9 -]/gi,
+        v = $(this).val();
+    if(r.test(v)) {
+        $(this).val(v.replace(r, ''));
+        c--;
+    }
+    this.setSelectionRange(c, c);
+    console.log(e.which);
+    }
 
-    $('#contact-input-3').on('input',function(e){
-      
-        var c = this.selectionStart,
-            r = /[^+0-9 -]/gi,
-            v = $(this).val();
-        if(r.test(v)) {
-            $(this).val(v.replace(r, ''));
-            c--;
-        }
-        this.setSelectionRange(c, c);
-        console.log(e.which);
-    })
-
-    $('#contact-input-4').on('input',function(e){
-        // var x = e.which || e.keycode;
-        // if(x >= 48 && x <= 57 || x === 107 || x === 8 || x === 16 || x === 61 || x === 32 || x === 173 ){
-        //     console.log($('#contact-input-3').val());
-        //     if($('#contact-input-3').val().includes('+') && (x=== 107 || x === 61)){
-        //         return false;
-        //     }
-        //     return true;
-        // }else{
-        //     return false;
-        // }
+    function checkEmail(e){
         var c = this.selectionStart,
             r = /[^a-z0-9.@_]/gi,
             v = $(this).val();
@@ -426,5 +491,23 @@ $(document).ready(()=>{
         }
         this.setSelectionRange(c, c);
         console.log(e.which);
-    })
+    }
+
+    $('#contact-input-1').on('input',checkName);
+
+    $('#contact-input-2').on('input',checkName);
+
+    $('#contact-input-3').on('input',checkPhone);
+
+    $('#contact-input-4').on('input',checkEmail);
+
+
+    // CONTACT MODAL FOR PRODUCTS
+    $('#formInfoName').on('input', checkName);
+
+
+    $('#formInfoPhone').on('input', checkPhone);
+
+    $('#formInfoEmail').on('input', checkEmail);
+    
 })

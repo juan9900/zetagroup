@@ -305,6 +305,7 @@
               <p class="product-4-content">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
               </p>
+              <button class="btn-get-product" data-bs-product="lampara 1" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
             </div>
           </div>
           <div id="product-2" class="product animate__animated flex-column flex-xxl-row-reverse align-items-center justify-content-end">
@@ -316,6 +317,7 @@
               <p class="product-2-content">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
               </p>
+              <button class="btn-get-product" data-bs-product="lampara 2" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
             </div>
           </div>
           <div id="product-3" class="product animate__animated  flex-column  flex-xxl-row align-items-center justify-content-start">
@@ -327,6 +329,7 @@
               <p class="product-3-content">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
               </p>
+              <button class="btn-get-product" data-bs-product="lampara 3" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
             </div>
           </div>
           <button class="show-products position-relative" id="btn-more-products">Más productos</button>
@@ -340,6 +343,7 @@
                 <p class="product-4-content">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
                 </p>
+                <button class="btn-get-product" data-bs-product="lampara 4" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
               </div>
             </div>
             <div id="product-2" class="product animate__animated  flex-column  flex-xxl-row align-items-center justify-content-start">
@@ -351,6 +355,7 @@
                 <p class="product-5-content">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
                 </p>
+                <button class="btn-get-product" data-bs-product="lampara 5" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
               </div>
             </div>
             <div id="product-3" class="product animate__animated flex-column flex-xxl-row-reverse align-items-center justify-content-end">
@@ -362,6 +367,7 @@
                 <p class="product-6-content">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
                 </p>
+                <button class="btn-get-product" data-bs-product="lampara 6" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
               </div>
             </div>
           </div>
@@ -683,6 +689,46 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal BUY PRODUCT -->
+  <div class="modal fade" id="modalGetProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Solicitud de información</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row m-auto w-100">
+            <div class="" id="liveAlertPlaceholderProduct"></div>
+          </div>
+          <form id="product-form" class="p-0 get-product-form">
+            <input type="hidden" name="msg" id="formInfoMsg" value="¡Hola, estoy interesado en un artículo!">
+            <div class="mb-3">
+              <label for="formInfoName" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="formInfoName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="formInfoPhone" class="form-label">Número telefónico</label>
+              <input type="text" class="form-control" id="formInfoPhone">
+            </div>
+            <div class="mb-3">
+              <label for="formInfoEmail" class="form-label">Correo Electrónico</label>
+              <input type="text" class="form-control" id="formInfoEmail">
+            </div>
+            <div class="mb-3">
+              <label for="formInfoProduct" class="form-label">Artículo</label>
+              <input type="text" class="form-control" id="formInfoProduct" disabled>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" id="btn-submit-form-product">Enviar</button>
         </div>
       </div>
     </div>
