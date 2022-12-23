@@ -83,7 +83,7 @@ $(document).ready(()=>{
       $(project4).removeClass('colored')
     }
 
-    if( isOnScreen( $( '.project-4' ) ) ) { /* Pass element id/class you want to check */
+    if( isOnScreen( $( '.project-5' ) ) ) { /* Pass element id/class you want to check */
     
       $(project5).addClass('colored');
  		}else{
