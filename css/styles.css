@@ -445,7 +445,7 @@ body {
 } */
 
 .section-indicator {
-  height: 3px;
+  height: 4px;
   width: 25%;
   background: rgb(240, 240, 240);
   position: absolute;
