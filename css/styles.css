@@ -1704,6 +1704,10 @@ footer {
     margin: 0 auto;
     width: 80%;
   }
+
+  .renders-list-container {
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1399px) {
