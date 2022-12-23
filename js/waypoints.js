@@ -190,7 +190,7 @@ var waypointProducts = new Waypoint({
 
     $('.product').css('opacity',1);
   },
-  offset: 400
+  offset: 600
 })
 // var waypointProducts = new Waypoint({
 //     element: productOne,
