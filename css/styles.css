@@ -72,7 +72,7 @@ body {
 }
 
 .floating-ws:hover {
-  background-color: var(--primaryDark);
+  background-color: rgb(47, 67, 41);
 }
 
 .floating-ws img {
@@ -290,6 +290,8 @@ body {
 .projects-list-container {
   width: 7%;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-list {
@@ -443,7 +445,7 @@ body {
 } */
 
 .section-indicator {
-  height: 4px;
+  height: 3px;
   width: 25%;
   background: rgb(240, 240, 240);
   position: absolute;
@@ -637,6 +639,13 @@ img.gray {
 #product-form input {
   caret-color: #000;
 }
+
+#modalGetProduct {
+  padding-right: 0 !important;
+}
+.modal-open {
+  padding-right: 0 !important;
+}
 #liveAlertPlaceholderProduct {
   padding: 0;
   margin-bottom: 1rem;
@@ -666,6 +675,18 @@ img.gray {
 
 #formInfoProduct {
   cursor: not-allowed;
+}
+
+#btn-close-modal-product {
+  background-color: #fff;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+#btn-submit-form-product {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
 }
 
 .btn-get-product {
@@ -1167,16 +1188,6 @@ footer {
   }
 }
 
-@media screen and (max-width: 769px) {
-  .welcome-message span {
-    display: none;
-  }
-
-  #liveAlertPlaceholder {
-    width: 90%;
-  }
-}
-
 @media screen and (max-width: 1399px) {
   body {
     overflow-x: hidden;
@@ -1185,7 +1196,7 @@ footer {
   .about-text {
     width: 100%;
     background: linear-gradient(to bottom, rgba(39, 39, 39, 0.52), #3e3e3ee4),
-      url("../assets/img/IMAGEN-SOMOS.png");
+      url("../assets/img/IMAGEN-SOMOS2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1227,6 +1238,59 @@ footer {
 
   .menu-btn__burger::after {
     transform: translateY(13px);
+  }
+
+  .projects-list-container {
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto 1rem auto;
+  }
+
+  .projects-list {
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .project-button {
+    margin-bottom: 0;
+    padding: 0;
+    width: 25%;
+    text-align: center;
+    padding-bottom: 0.4rem;
+  }
+
+  .project-section-indicator {
+    width: 25%;
+    height: 3px;
+    background: var(--primary);
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    margin: 0;
+    transition: all 0.2s linear;
+  }
+
+  .project-section-indicator.first {
+    bottom: 0;
+    top: auto;
+    left: 0;
+  }
+  .project-section-indicator.second {
+    bottom: 0;
+    top: auto;
+    left: 25%;
+  }
+  .project-section-indicator.third {
+    bottom: 0;
+    top: auto;
+    left: 50%;
+  }
+
+  .project-section-indicator.fourth {
+    bottom: 0;
+    top: auto;
+    left: 75%;
   }
 
   .section-title {
@@ -1438,6 +1502,9 @@ footer {
     margin-bottom: 1.5rem;
   }
 
+  .btn-get-product {
+    margin: 0 auto;
+  }
   /* SECTION STEPS */
   .rows-container {
     padding: 0;
@@ -1661,6 +1728,15 @@ footer {
   }
 }
 
+@media screen and (min-width: 1399px) {
+  .renders-list-container {
+    position: absolute !important;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 @media screen and (min-width: 2000px) {
   .projects-container {
     right: 0%;
@@ -1676,6 +1752,14 @@ footer {
 
   .section-quotation > div {
     width: 87%;
+  }
+
+  .section-renders {
+    padding-top: 16rem;
+  }
+
+  .renders-list-container {
+    top: 12rem;
   }
 }
 
@@ -1706,5 +1790,25 @@ footer {
     z-index: 200;
     width: 36%;
     /* transform: translateX(50%); */
+  }
+}
+@media screen and (max-width: 769px) {
+  .welcome-message span {
+    display: none;
+  }
+
+  #liveAlertPlaceholder {
+    width: 90%;
+  }
+
+  .projects-list-container,
+  .renders-list-container {
+    width: 80%;
+  }
+
+  .project-button,
+  .renders-list li {
+    font-size: 1.2em;
+    padding: 0 0 0.4rem 0;
   }
 }

@@ -3,6 +3,7 @@ const project1 = $('.project-1');
 const project2 = $('.project-2');
 const project3 = $('.project-3');
 const project4 = $('.project-4');
+const project5 = $('.project-5');
 
 
 
@@ -81,6 +82,13 @@ $(document).ready(()=>{
  		}else{
       $(project4).removeClass('colored')
     }
+
+    if( isOnScreen( $( '.project-4' ) ) ) { /* Pass element id/class you want to check */
+    
+      $(project5).addClass('colored');
+ 		}else{
+      $(project5).removeClass('colored')
+    }
   }
   $(window).on('resize scroll', onScroll);
   $(window).on('touchmove', onScroll); // for mobile
@@ -119,15 +127,12 @@ var waypointProjects = new Waypoint({
             setTimeout(()=> {
                 $(projectsAnimation[2]).css('opacity',1);
                 $(projectsAnimation[2]).addClass('animate__fadeInRight');
-                console.log(2);
                 setTimeout(()=> {
                     $(projectsAnimation[1]).css('opacity',1);
                     $(projectsAnimation[1]).addClass('animate__fadeInRight');
-                    console.log(3);
                     setTimeout(()=> {
                         $(projectsAnimation[0]).css('opacity',1);
                         $(projectsAnimation[0]).addClass('animate__fadeInRight');
-                        console.log(4);
                       },150);
                   },100);
               },50);
@@ -139,7 +144,7 @@ var waypointProjects = new Waypoint({
         $(project2).css('opacity',1);
         $(project3).css('opacity',1);
         $(project4).css('opacity',1);
-
+        $(project5).css('opacity',1);
       }
       
       console.log('scrolled to projects');

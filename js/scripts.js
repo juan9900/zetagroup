@@ -59,7 +59,18 @@ const positionProjects = () => {
     })
 }
 
+
 // PRODUCTS SECTION
+
+const checkEmailSyntax = (email) => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const checkPhoneSyntax = (phone) => {
+    var re = /^(0)?(414|416|424|412)[0-9]{7}$/;
+    return re.test(String(phone).toLowerCase());
+}
 
 $('#btn-submit-form-product').on('click', () => {
     $("#product-form").submit();
@@ -81,12 +92,12 @@ $('#product-form').on('submit',function(e){
 
     
     if(infoFullName.trim() != '' && infoPhoneNumber.trim() != '' && infoEmail.trim() != '' && infoProduct.trim() != '' && infoMessage.trim() != ''){
-        if ((infoPhoneNumber.length !== 11 && infoPhoneNumber.length !== 10)) {
+        if (!checkEmailSyntax(infoEmail) || !checkPhoneSyntax(infoPhoneNumber)) {
             let message;
         if (window.location.hash == "#es") {
-            message = 'Por favor verifica el número telefónico ingresado';
+            message = 'Por favor verifica los datos ingresados.';
         }else{
-            message = 'Please check the number entered'; 
+            message = 'Please check the data entered.'; 
         }
         alert(message,'fill','product');
         timer = setTimeout(() => {
@@ -115,6 +126,7 @@ $('#product-form').on('submit',function(e){
             error: (err) => console.log(err)
         });
     }else{
+        console.log('full');
         let message;
         if (window.location.hash == "#es") {
             message = 'Por favor rellena todos los campos';
@@ -122,11 +134,11 @@ $('#product-form').on('submit',function(e){
             message = 'Please fill in all fields'
         }
         alert(message,'fill','product');
-        timer = setTimeout(() => {
-            $('#liveAlertPlaceholderProduct').fadeOut(500, function(){
-                $(this).empty().show();
-            })
-        },4000)
+        // timer = setTimeout(() => {
+        //     $('#liveAlertPlaceholderProduct').fadeOut(500, function(){
+        //         $(this).empty().show();
+        //     })
+        // },4000)
     }
     
     
@@ -321,8 +333,8 @@ $(document).ready(()=>{
     // OFFICE PROJECTS
     $('#btn-projects-2').on('click', function() {
         console.log('office section');
-        // if(!$(this).hasClass('active')){
-            // removeActiveProjects();
+        if(!$(this).hasClass('active')){
+            removeActiveProjects();
             $('.project-section-indicator').addClass('second');
             $("#btn-projects-2").addClass("active");
             $('.project-office').removeClass('animate__fadeIn animate__animated animate__slow')
@@ -332,7 +344,7 @@ $(document).ready(()=>{
             $('.project-office').show();
             $('.project-office').addClass('animate__fadeIn animate__animated animate__slow')
             
-        // }
+        }
         
     })
     // LIVING ROOM PROJECTS
@@ -452,7 +464,6 @@ $(document).ready(()=>{
 
     $('.btn-get-product').each(function(index){
         $(this).on('click',function(){
-            console.log('getting');
             $('#formInfoProduct').val($(this).attr('data-bs-product'));
         })
     })
