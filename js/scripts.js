@@ -388,10 +388,10 @@ $(document).ready(()=>{
             $('.section-indicator').addClass('first');
             $('.color').fadeOut(function(){
                 $('.color').each(function(index){
-                    $(this).attr('src',`/assets/img/render3.jpg`);
+                    $(this).attr('src',`/assets/img/render1.jpg`);
                 })
                 $('.gray').each(function(index){
-                    $(this).attr('src',`/assets/img/render3.jpg`);
+                    $(this).attr('src',`/assets/img/render1.jpg`);
                 })
             });
             $('.color').fadeIn(); 
@@ -409,10 +409,10 @@ $(document).ready(()=>{
             $('.section-indicator').addClass('second');
             $('.color').fadeOut(function(){
                 $('.color').each(function(index){
-                    $(this).attr('src',`/assets/img/render5.jpg`);
+                    $(this).attr('src',`/assets/img/render1.jpg`);
                 })
                 $('.gray').each(function(index){
-                    $(this).attr('src',`/assets/img/render5.jpg`);
+                    $(this).attr('src',`/assets/img/render1.jpg`);
                 })
             });
             $('.color').fadeIn(); 
@@ -430,10 +430,10 @@ $(document).ready(()=>{
             $(".section-indicator").addClass("third");
             $('.color').fadeOut(function(){
                 $('.color').each(function(index){
-                    $(this).attr('src',`/assets/img/render4.jpg`);
+                    $(this).attr('src',`/assets/img/render1.jpg`);
                 })
                 $('.gray').each(function(index){
-                    $(this).attr('src',`/assets/img/render4.jpg`);
+                    $(this).attr('src',`/assets/img/render1.jpg`);
                 })
             });
             $('.color').fadeIn(); 
