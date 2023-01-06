@@ -276,19 +276,22 @@ body {
   background-color: var(--primary);
   color: #fff;
   font-size: 1.3em;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   width: 30%;
   position: relative;
   z-index: 1;
 }
 
+.about-us-text {
+  font-size: 0.9em;
+}
 /* SECTION PROJECTS */
 .section-projects {
   margin-top: 10rem;
 }
 
 .projects-list-container {
-  width: 7%;
+  width: 12%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -324,7 +327,7 @@ body {
   background: var(--primary);
   position: absolute;
   left: 0;
-  margin: 5% 0;
+  margin: 3% 0;
   transition: all 0.2s linear;
 }
 
@@ -425,7 +428,7 @@ body {
 }
 
 .renders-list-container {
-  width: 25%;
+  width: 35%;
   margin: 0 auto;
 }
 .renders-list {
@@ -1807,12 +1810,20 @@ footer {
 
   .projects-list-container,
   .renders-list-container {
-    width: 80%;
+    width: 90%;
   }
 
   .project-button,
   .renders-list li {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    padding: 0 0 0.4rem 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .project-button,
+  .renders-list li {
+    font-size: 0.98em;
     padding: 0 0 0.4rem 0;
   }
 }

@@ -51,14 +51,15 @@ function changeLanguage(lang) {
         welcomeSpan1: "Architecture",
         welcomeSpan2: "Design",
         welcomeSpan3: 'Construction',
-        section1Text: 'ENG Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
+        section1Text1: 'We are a company with almost 10 years of experience, with a multidisciplinary team with extensive knowledge in design and construction, we have the ability to plan, create and execute spaces of comfort.',
+        section1Text2: 'In Zeta group we work under an integral service, in which we assist our clients in the whole process, from the conceptualization of the design, the supply of materials to the final furniture of the project; in this way we offer the turnkey modality.',
         section2Project1Title: 'Office',
         section2Project1Content: 'ENG OFFICE Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
 
         section2Project2Title: 'Living Room',
         section2Project2Content: 'ENG LIVING ROOM Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
 
-        section2Project3Title: 'Living Room',
+        section2Project3Title: 'Bathroom',
         section2Project3Content: 'ENG LIVING ROOM Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
 
         section2Project4Title: 'Kitchen',
@@ -117,7 +118,8 @@ function changeLanguage(lang) {
         welcomeSpan1: "Arquitectura",
         welcomeSpan2: "Diseño",
         welcomeSpan3: 'Construcción',
-        section1Text: 'ESPA Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
+        section1Text1: 'Somos una empresa que cuenta con casi 10 años de experiencia, con un equipo multidisciplinario de amplios conocimientos en diseño y construcción, tenemos la capacidad de planificar, crear y ejecutar espacios de confort.⁣',
+        section1Text2: '⁣En Zeta group trabajamos bajo un servicio integral, en el cual asistimos a nuestros clientes en todo el proceso, desde la conceptualización del diseño, el suministro de los materiales hasta los mobiliarios finales del proyecto; de esta manera ofrecer la modalidad llave en mano.',
         section2Project1Title: 'Oficina',
         section2Project1Content: 'ESPA OFICINA Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laccusantium doloremque laudan ',
 
@@ -195,8 +197,14 @@ function changeLanguage(lang) {
         $('#welcome-span-2').text(language.es.welcomeSpan2);
         $('#welcome-span-3').text(language.es.welcomeSpan3);
 
-        $('#about-text').text(language.es.section1Text);
+        $('#about-text-1').text(language.es.section1Text1);
+        $('#about-text-2').text(language.es.section1Text2);
 
+
+        $('#btn-projects-1').text(language.es.section2Project4Title);
+        $('#btn-projects-2').text(language.es.section2Project1Title);
+        $('#btn-projects-3').text(language.es.section2Project2Title);
+        $('#btn-projects-4').text(language.es.section2Project3Title);
         $('.project-1-title').text(language.es.section2Project1Title);
         $('.project-1-content').text(language.es.section2Project1Content);
         $('.project-2-title').text(language.es.section2Project2Title);
@@ -266,8 +274,13 @@ function changeLanguage(lang) {
         $('#welcome-span-2').text(language.eng.welcomeSpan2);
         $('#welcome-span-3').text(language.eng.welcomeSpan3);
 
-        $('#about-text').text(language.eng.section1Text);
-
+        $('#about-text-1').text(language.eng.section1Text1);
+        $('#about-text-2').text(language.eng.section1Text2);
+        
+        $('#btn-projects-1').text(language.eng.section2Project4Title);
+        $('#btn-projects-2').text(language.eng.section2Project1Title);
+        $('#btn-projects-3').text(language.eng.section2Project2Title);
+        $('#btn-projects-4').text(language.eng.section2Project3Title);
         $('.project-1-title').text(language.eng.section2Project1Title);
         $('.project-1-content').text(language.eng.section2Project1Content);
         $('.project-2-title').text(language.eng.section2Project2Title);
@@ -277,6 +290,11 @@ function changeLanguage(lang) {
         $('.project-4-title').text(language.eng.section2Project4Title);
         $('.project-4-content').text(language.eng.section2Project4Content);
 
+
+        $('#btn-render-1').text(language.eng.section2Project4Title);
+        $('#btn-render-2').text(language.eng.section2Project1Title);
+        $('#btn-render-3').text(language.eng.section2Project2Title);
+        $('#btn-render-4').text(language.eng.section2Project3Title);
         $('.render-1-content').text(language.eng.section3Render1);
         $('.render-2-content').text(language.eng.section3Render2);
         $('.render-3-content').text(language.eng.section3Render3);
