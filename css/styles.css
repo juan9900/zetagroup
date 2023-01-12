@@ -683,7 +683,7 @@ img.gray {
 .carousel-item img.more-product-img {
   object-fit: contain !important;
   margin: 0 auto;
-  width: 40%;
+  width: 42%;
   height: auto;
 }
 
@@ -1854,5 +1854,10 @@ footer {
   .renders-list li {
     font-size: 0.98em;
     padding: 0 0 0.4rem 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .carousel-item img.more-product-img {
+    width: 55%;
   }
 }
