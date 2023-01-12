@@ -735,7 +735,7 @@ img.gray {
 
 .hidden-products {
   overflow: hidden;
-  transition: max-height 0.35s ease-out;
+  transition: max-height 0.45s ease-out;
   height: auto;
   max-height: 0px;
   /* top: 100%; */
@@ -1505,7 +1505,7 @@ footer {
 
   .product {
     max-width: 90%;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
