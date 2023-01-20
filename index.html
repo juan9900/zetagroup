@@ -305,7 +305,7 @@
               <p class="product-4-content">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
               </p>
-              <button class="btn-get-product" data-bs-images="6" data-bs-product="Cilindro superficial" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+              <button data-product="cilindro superficial" class="btn-get-product" data-bs-images="6" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
             </div>
           </div>
           <div id="product-2" class="product animate__animated flex-column flex-xxl-row-reverse align-items-center justify-content-end">
@@ -319,7 +319,7 @@
               <p class="product-2-content">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
               </p>
-              <button class="btn-get-product" data-bs-images="6" data-bs-product="Integrada extraíble" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+              <button data-product="integrada extraíble" class="btn-get-product" data-bs-images="6" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
             </div>
           </div>
           <div id="product-3" class="product animate__animated  flex-column  flex-xxl-row align-items-center justify-content-start">
@@ -333,12 +333,12 @@
               <p class="product-3-content">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
               </p>
-              <button class="btn-get-product" data-bs-images="2" data-bs-product="Spot Empotrado" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+              <button data-product="spot empotrado" class="btn-get-product" data-bs-images="2" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
             </div>
           </div>
           <button class="show-products position-relative" id="btn-more-products">Más productos</button>
           <div class="hidden-products">
-            <div id="product-1" class="product animate__animated flex-column flex-xxl-row-reverse align-items-center justify-content-end">
+            <!-- <div id="product-1" class="product animate__animated flex-column flex-xxl-row-reverse align-items-center justify-content-end">
               <div class="product-img-container">
                 <img class="product-img" src="assets/img/products/lámpara-empotrada-01.png" alt="product lamp">
               </div>
@@ -349,12 +349,12 @@
                 <p class="product-4-content">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
                 </p>
-                <button class="btn-get-product" data-bs-images="5" data-bs-product="Lámpara empotrada" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+                <button class="btn-get-product" data-bs-images="5" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
               </div>
             </div>
             <div id="product-2" class="product animate__animated  flex-column  flex-xxl-row align-items-center justify-content-start">
               <div class="product-img-container">
-                <img class="product-img" src="assets/img/products/spot-empotrado-01.png" alt="product lamp">
+                <img class="product-img" src="assets/img/products/marco-cuadrado-empotrado-01.png" alt="product lamp">
               </div>
               <div class="product-info d-flex flex-column justify-content-center align-items-start">
                 <h3 class="product-5-title">
@@ -363,12 +363,12 @@
                 <p class="product-5-content">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
                 </p>
-                <button class="btn-get-product" data-bs-product="lampara 5" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+                <button class="btn-get-product" data-bs-images="3" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
               </div>
             </div>
             <div id="product-3" class="product animate__animated flex-column flex-xxl-row-reverse align-items-center justify-content-end">
               <div class="product-img-container">
-                <img class="product-img" src="assets/img/products/spot-empotrado-01.png" alt="product lamp">
+                <img class="product-img" src="assets/img/products/aro-cuadrado-empotrado-03.png" alt="product lamp">
               </div>
               <div class="product-info d-flex flex-column justify-content-center align-items-end">
                 <h3 class="product-6-title">
@@ -377,8 +377,128 @@
                 <p class="product-6-content">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
                 </p>
-                <button class="btn-get-product" data-bs-product="lampara 6" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+                <button class="btn-get-product" data-bs-images="4" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
               </div>
+            </div> -->
+            <div id="carousel-hidden-products" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carousel-hidden-products" data-bs-slide-to="7" aria-label="Slide 8"></button>
+
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active hidden-product">
+                  <img src="/assets/img/products/lámpara-empotrada-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-4-title hidden-product-title">Titulo</h3>
+                    <p class="product-4-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="Lámpara empotrada" class="btn-get-product" data-bs-images="5" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+
+                </div>
+                <div class="carousel-item hidden-product">
+                  <img src="/assets/img/products/marco-cuadrado-empotrado-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-5-title hidden-product-title">Titulo</h3>
+                    <p class="product-5-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="marco cuadrado empotrado" class="btn-get-product" data-bs-images="3" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+                </div>
+                <div class="carousel-item hidden-product">
+                  <img src="/assets/img/products/aro-cuadrado-empotrado-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-6-title hidden-product-title">Titulo</h3>
+                    <p class="product-6-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="aro cuadrado empotrado" class="btn-get-product" data-bs-images="4" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+                </div>
+                <div class="carousel-item hidden-product">
+                  <img src="/assets/img/products/integrada-extraíble-v2-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-7-title hidden-product-title">Titulo</h3>
+                    <p class="product-7-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="integrada extraíble v2" class="btn-get-product" data-bs-images="3" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+                </div>
+                <div class="carousel-item hidden-product">
+                  <img src="/assets/img/products/cilíndro-dirigible-integrado-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-8-title hidden-product-title">Titulo</h3>
+                    <p class="product-8-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="cilíndro dirigible integrado" class="btn-get-product" data-bs-images="3" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+                </div>
+                <div class="carousel-item hidden-product">
+                  <img src="/assets/img/products/lámpara-empotrada-v2-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-9-title hidden-product-title">Titulo</h3>
+                    <p class="product-9-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="lámpara empotrada v2" class="btn-get-product" data-bs-images="3" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+                </div>
+                <div class="carousel-item hidden-product">
+                  <img src="/assets/img/products/multispot-para-empotrar-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-10-title hidden-product-title">Titulo</h3>
+                    <p class="product-10-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="multispot para empotrar" class="btn-get-product" data-bs-images="1" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+                </div>
+                <div class="carousel-item hidden-product">
+                  <img src="/assets/img/products/mini-spot-para-exterior-01.png" alt="" srcset="">
+                  <div class="product-info">
+                    <h3 class="product-11-title hidden-product-title">Titulo</h3>
+                    <p class="product-11-content hidden-product-description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id
+                    </p>
+                    <button data-product="mini spot para exterior" class="btn-get-product" data-bs-images="2" data-bs-toggle="modal" data-bs-target="#modalGetProduct">Adquirir</button>
+
+                  </div>
+
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-hidden-products" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel-hidden-products" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
 
@@ -713,7 +833,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div id="carousel-more-product" class="carousel slide">
-          <div class="carousel-indicators"></div>
+          <div class="carousel-indicators modal-indicators"></div>
           <div class="carousel-inner more-product-inner">
             <!-- <div class="carousel-item active">
               <img src="" class="d-block more-product-img" alt="...">

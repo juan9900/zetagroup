@@ -101,7 +101,7 @@ body {
   height: 100vh;
 }
 
-.carousel-item img {
+#welcomeCarousel.carousel-item img {
   height: 100vh;
   object-fit: cover;
 }
@@ -766,7 +766,9 @@ img.gray {
 }
 
 .show-products.show + .hidden-products {
-  max-height: 1500px;
+  /* max-height: 1500px; */
+  max-height: 45rem;
+  width: 100%;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
 }
 
@@ -778,9 +780,10 @@ img.gray {
 
 .product {
   max-width: 80%;
-  margin: 1.5rem auto;
   display: flex;
   opacity: 0;
+  padding: 1.5rem 0;
+  margin: 0 auto;
 }
 
 .product h3 {
@@ -790,6 +793,49 @@ img.gray {
 
 .product p {
   font-size: 1.4rem;
+}
+
+#carousel-hidden-products .carousel-inner {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#carousel-hidden-products .carousel-item {
+  height: 90%;
+}
+
+#carousel-hidden-products {
+  height: 45rem;
+}
+
+#carousel-hidden-products .carousel-item.active,
+#carousel-hidden-products .carousel-item-next,
+#carousel-hidden-products .carousel-item-prev {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-product {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.hidden-product img {
+  width: 30%;
+}
+
+.hidden-product-description {
+  font-size: 1.4em;
+}
+
+.hidden-product-title {
+  font-size: 5rem;
+  letter-spacing: 5px;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 /* SECTION STEPS */
@@ -1236,7 +1282,7 @@ footer {
   .section-title {
     letter-spacing: 6px;
   }
-  .carousel-item img {
+  #welcomeCarousel.carousel-item img {
     height: 100vh;
     object-fit: cover;
   }
@@ -1505,10 +1551,10 @@ footer {
 
   .product {
     max-width: 90%;
-    margin: 1.5rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1.5rem 0;
   }
 
   .product-info h3 {
@@ -1532,6 +1578,18 @@ footer {
 
   .btn-get-product {
     margin: 0 auto;
+  }
+
+  #carousel-hidden-products .carousel-inner {
+    width: 80%;
+  }
+
+  #carousel-hidden-products {
+    height: 30rem;
+  }
+
+  .hidden-product {
+    padding-top: 0;
   }
   /* SECTION STEPS */
   .rows-container {
@@ -1768,7 +1826,8 @@ footer {
     transform: translateX(-50%);
   }
 
-  .product h3 {
+  .product h3,
+  .hidden-product-title {
     line-height: 77px;
   }
 }

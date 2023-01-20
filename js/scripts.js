@@ -462,15 +462,22 @@ $(document).ready(()=>{
     })
 
 
+    // Click in get button for each product
     $('.btn-get-product').each(function(index){
         $(this).on('click',function(){
-            const carouselIndicators = $('.carousel-indicators');
+            const carouselIndicators = $('.modal-indicators');
             const myCarouselElement = $('#carousel-more-product');
             const carouselProductsImages = $('.more-product-inner');
+
+            // Get the product name as it is
+            const productName = $(this).closest('.product-info').find('h3').text();
+            const imageName = $(this).attr('data-product');
+            // Separate the product name words by - to use it in images src
+            const product = imageName.replace(new RegExp(' ','g'),'-');
+            
             //Set the carousel back to position 0 when reopening the modal
             const carousel = new bootstrap.Carousel(myCarouselElement).to(0);
             $(carouselIndicators).empty();
-            const product = $(this).attr('data-bs-product').replace(' ','-');
             const imagesQty = parseInt($(this).attr('data-bs-images'));
 
             // Take the value of data-bs-images in each product, the value must be an integer
@@ -495,7 +502,8 @@ $(document).ready(()=>{
             //     // ex: data-bs-product: Cilindro superficial / image name: cilindro-superficial-01
             //     $(this).attr('src',`/assets/img/products/${product}-0${index+1}.png`);
             // })
-            $('#formInfoProduct').val($(this).attr('data-bs-product'));
+            $('#formInfoProduct').val( productName);
+            
         })
     })
 

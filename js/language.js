@@ -71,18 +71,29 @@ function changeLanguage(lang) {
         section3Render4: 'ENG Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos. ',
         section3Render5: 'ENG Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos. ',
         
-        section4Product1Title: 'Lamp',
-        section4Product1Content:'ENG Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
-        section4Product2Title: 'Lamp',
-        section4Product2Content:'ENG Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
-        section4Product3Title: 'Lamp',
-        section4Product3Content:'ENG Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
-        section4Product4Title: 'Lamp',
-        section4Product4Content:'ENG Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
-        section4Product5Title: 'Lamp',
-        section4Product5Content:'ENG Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
-        section4Product6Title: 'Lamp',
-        section4Product6Content:'ENG Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product1Title: 'Superficial cylinder',
+        section4Product1Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product2Title: 'Removable integrated',
+        section4Product2Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product3Title: 'Recessed spotlight',
+        section4Product3Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product4Title: 'Recessed light',
+        section4Product4Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product5Title: 'Recessed square frame',
+        section4Product5Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product6Title: 'Recessed square ring',
+        section4Product6Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product7Title: 'Integrated removable V2',
+        section4Product7Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product8Title: 'Integrated steerable cylinder',
+        section4Product8Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product9Title: 'Recessed Light V2',
+        section4Product9Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product10Title: 'Multi Spot for embedding',
+        section4Product10Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product11Title: 'Mini Spot for outdoor use',
+        section4Product11Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+
         section4MoreProducts: 'More products',
 
         section5Step1:'Initial meeting with the client',
@@ -138,7 +149,7 @@ function changeLanguage(lang) {
         section3Render4: 'ESP Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos.  ',
         section3Render5: 'ESP Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed modi reprehenderit magni architecto, consequuntur ducimus rem unde ad. Iure architecto officia iste est assumenda nobis incidunt rem quas? Voluptates, dignissimos.  ',
         
-        section4Product1Title: 'Cilindro superficial',
+        section4Product1Title: 'Cilíndro superficial',
         section4Product1Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
         section4Product2Title: 'Integrada extraíble',
         section4Product2Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
@@ -146,10 +157,23 @@ function changeLanguage(lang) {
         section4Product3Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
         section4Product4Title: 'Lámpara empotrada',
         section4Product4Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
-        section4Product5Title: 'Lámpara',
+        section4Product5Title: 'Marco cuadrado empotrado',
         section4Product5Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
-        section4Product6Title: 'Lámpara',
+        section4Product6Title: 'Aro cuadrado empotrado',
         section4Product6Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product7Title: 'Integrada extraíble V2',
+        section4Product7Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product8Title: 'Cilíndro dirigible integrado',
+        section4Product8Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product9Title: 'Lámpara Empotrada V2',
+        section4Product9Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product10Title: 'Multispot para empotrar',
+        section4Product10Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+        section4Product11Title: 'Mini Spot para exterior',
+        section4Product11Content:'ESP Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti pariatur alias molestias id ',
+
+
+
         section4MoreProducts: 'Más productos',
 
         section5Step1:'Reunión inicial con el cliente',
@@ -238,6 +262,21 @@ function changeLanguage(lang) {
         $('.product-6-title').text(language.es.section4Product6Title);
         $('.product-6-content').text(language.es.section4Product6Content);
 
+        $('.product-7-title').text(language.es.section4Product7Title);
+        $('.product-7-content').text(language.es.section4Product7Content);
+
+        $('.product-8-title').text(language.es.section4Product8Title);
+        $('.product-8-content').text(language.es.section4Product8Content);
+
+        $('.product-9-title').text(language.es.section4Product9Title);
+        $('.product-9-content').text(language.es.section4Product9Content);
+
+        $('.product-10-title').text(language.es.section4Product10Title);
+        $('.product-10-content').text(language.es.section4Product10Content);
+
+        $('.product-11-title').text(language.es.section4Product11Title);
+        $('.product-11-content').text(language.es.section4Product11Content);
+
         $('#btn-more-products').text(language.es.section4MoreProducts);
 
         $('#step-1').text(language.es.section5Step1);
@@ -318,6 +357,21 @@ function changeLanguage(lang) {
 
         $('.product-6-title').text(language.eng.section4Product6Title);
         $('.product-6-content').text(language.eng.section4Product6Content);
+
+        $('.product-7-title').text(language.eng.section4Product7Title);
+        $('.product-7-content').text(language.eng.section4Product7Content);
+
+        $('.product-8-title').text(language.eng.section4Product8Title);
+        $('.product-8-content').text(language.eng.section4Product8Content);
+
+        $('.product-9-title').text(language.eng.section4Product9Title);
+        $('.product-9-content').text(language.eng.section4Product9Content);
+
+        $('.product-10-title').text(language.eng.section4Product10Title);
+        $('.product-10-content').text(language.eng.section4Product10Content);
+
+        $('.product-11-title').text(language.eng.section4Product11Title);
+        $('.product-11-content').text(language.eng.section4Product11Content);
 
         $('#btn-more-products').text(language.eng.section4MoreProducts);
 
