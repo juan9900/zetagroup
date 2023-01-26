@@ -738,6 +738,8 @@ img.gray {
   transition: max-height 0.45s ease-out;
   height: auto;
   max-height: 0px;
+  width: 75%;
+  margin: 0 auto;
   /* top: 100%; */
   /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
 }
@@ -747,6 +749,8 @@ img.gray {
   background-color: #fff;
   color: var(--primary);
   font-size: 1.2em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .show-products::after {
@@ -765,10 +769,11 @@ img.gray {
   transition: transform 0.3s linear;
 }
 
-.show-products.show + .hidden-products {
+.hidden-products.show {
   /* max-height: 1500px; */
   max-height: 45rem;
-  width: 100%;
+  width: 75%;
+  margin: 0 auto;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
 }
 
@@ -1723,6 +1728,12 @@ footer {
   }
 
   .map {
+    width: 90%;
+  }
+  .hidden-products.show {
+    width: 90%;
+  }
+  .hidden-products {
     width: 90%;
   }
 

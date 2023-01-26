@@ -292,6 +292,7 @@ $('.show-products').on('click',function(){
     //     $(this).text('Mostrar menos');
     // }
     $(this).toggleClass('show');
+    $('.hidden-products').toggleClass('show');
     
 })
 
