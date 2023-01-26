@@ -1175,7 +1175,7 @@ input[type="radio"] {
   position: absolute;
   z-index: 9999999;
   top: 0;
-  left: -100%;
+  left: -110%;
   display: flex;
   justify-content: start;
   align-items: center;
