@@ -300,265 +300,265 @@ $('.show-products').on('click',function(){
 
 
 
-$(document).ready(()=>{
-    positionProjects();
-    $('.project-office').hide();
-    $('.project-living').hide();
-    $('.project-bath').hide();
-    const removeActiveProjects = () => {
-        $('.project-button').removeClass('active');
-        $('.project-section-indicator').removeClass('first second third fourth');
-    }
+// $(document).ready(()=>{
+//     positionProjects();
+//     $('.project-office').hide();
+//     $('.project-living').hide();
+//     $('.project-bath').hide();
+//     const removeActiveProjects = () => {
+//         $('.project-button').removeClass('active');
+//         $('.project-section-indicator').removeClass('first second third fourth');
+//     }
 
-    const removeActiveRenders = () => {
-        $('.btn-render').removeClass('active');
-    }
+//     const removeActiveRenders = () => {
+//         $('.btn-render').removeClass('active');
+//     }
 
-    // KITCHEN PROJECTS
-    $('#btn-projects-1').on('click', function(){
-        if(!$(this).hasClass('active')){
-            removeActiveProjects();
-            $('.project-section-indicator').addClass('first');
-            $("#btn-projects-1").addClass("active");
-            $('.project-kitchen').removeClass('animate__fadeIn animate__animated animate__slow')
-            $('.project-living').hide();
-            $('.project-bath').hide();
-            $('.project-office').hide();
-            $('.project-kitchen').show();
-            $('.project-kitchen').addClass('animate__fadeIn animate__animated animate__slow')
+//     // KITCHEN PROJECTS
+//     $('#btn-projects-1').on('click', function(){
+//         if(!$(this).hasClass('active')){
+//             removeActiveProjects();
+//             $('.project-section-indicator').addClass('first');
+//             $("#btn-projects-1").addClass("active");
+//             $('.project-kitchen').removeClass('animate__fadeIn animate__animated animate__slow')
+//             $('.project-living').hide();
+//             $('.project-bath').hide();
+//             $('.project-office').hide();
+//             $('.project-kitchen').show();
+//             $('.project-kitchen').addClass('animate__fadeIn animate__animated animate__slow')
 
-        }
+//         }
         
-    })
+//     })
     
-    // OFFICE PROJECTS
-    $('#btn-projects-2').on('click', function() {
-        console.log('office section');
-        if(!$(this).hasClass('active')){
-            removeActiveProjects();
-            $('.project-section-indicator').addClass('second');
-            $("#btn-projects-2").addClass("active");
-            $('.project-office').removeClass('animate__fadeIn animate__animated animate__slow')
-            $('.project-bath').hide();
-            $('.project-kitchen').hide();
-            $('.project-living').hide();
-            $('.project-office').show();
-            $('.project-office').addClass('animate__fadeIn animate__animated animate__slow')
+//     // OFFICE PROJECTS
+//     $('#btn-projects-2').on('click', function() {
+//         console.log('office section');
+//         if(!$(this).hasClass('active')){
+//             removeActiveProjects();
+//             $('.project-section-indicator').addClass('second');
+//             $("#btn-projects-2").addClass("active");
+//             $('.project-office').removeClass('animate__fadeIn animate__animated animate__slow')
+//             $('.project-bath').hide();
+//             $('.project-kitchen').hide();
+//             $('.project-living').hide();
+//             $('.project-office').show();
+//             $('.project-office').addClass('animate__fadeIn animate__animated animate__slow')
             
-        }
+//         }
         
-    })
-    // LIVING ROOM PROJECTS
-    $('#btn-projects-3').on('click', function (){
-        if(!$(this).hasClass('active')){
-            removeActiveProjects();
-            $('.project-section-indicator').addClass('third');
-            $("#btn-projects-3").addClass("active");
-            $('.project-living').removeClass('animate__fadeIn animate__animated animate__slow')
-            $('.project-kitchen').hide();
-            $('.project-bath').hide();
-            $('.project-office').hide();
-            $('.project-living').show();
-            $('.project-living').addClass('animate__fadeIn animate__animated animate__slow')
+//     })
+//     // LIVING ROOM PROJECTS
+//     $('#btn-projects-3').on('click', function (){
+//         if(!$(this).hasClass('active')){
+//             removeActiveProjects();
+//             $('.project-section-indicator').addClass('third');
+//             $("#btn-projects-3").addClass("active");
+//             $('.project-living').removeClass('animate__fadeIn animate__animated animate__slow')
+//             $('.project-kitchen').hide();
+//             $('.project-bath').hide();
+//             $('.project-office').hide();
+//             $('.project-living').show();
+//             $('.project-living').addClass('animate__fadeIn animate__animated animate__slow')
 
-        }
-    })
+//         }
+//     })
 
-    // BATHROOM PROJECTS
-    $('#btn-projects-4').on('click', function (){
-        if(!$(this).hasClass('active')){
-            removeActiveProjects();
-            $('.project-section-indicator').addClass('fourth');
-            $("#btn-projects-4").addClass("active");
-            $('.project-bath').removeClass('animate__fadeIn animate__animated animate__slow')
-            $('.project-kitchen').hide();
-            $('.project-office').hide();
-            $(".project-living").hide();
-            $('.project-bath').show();
-            $('.project-bath').addClass('animate__fadeIn animate__animated animate__slow')
+//     // BATHROOM PROJECTS
+//     $('#btn-projects-4').on('click', function (){
+//         if(!$(this).hasClass('active')){
+//             removeActiveProjects();
+//             $('.project-section-indicator').addClass('fourth');
+//             $("#btn-projects-4").addClass("active");
+//             $('.project-bath').removeClass('animate__fadeIn animate__animated animate__slow')
+//             $('.project-kitchen').hide();
+//             $('.project-office').hide();
+//             $(".project-living").hide();
+//             $('.project-bath').show();
+//             $('.project-bath').addClass('animate__fadeIn animate__animated animate__slow')
 
-        }
-    })
+//         }
+//     })
 
-    $('#btn-render-1').on('click', function (){
-        if(!$(this).hasClass('active')){
-            removeActiveRenders();
-            $(this).addClass('active');
-            $('.circle-container').fadeOut();
-            $('.section-indicator').removeClass('second third fourth')
-            $('.section-indicator').addClass('first');
-            $('.color').fadeOut(function(){
-                $('.color').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-                $('.gray').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-            });
-            $('.color').fadeIn(); 
-            $('.circle-container').fadeIn();
+//     $('#btn-render-1').on('click', function (){
+//         if(!$(this).hasClass('active')){
+//             removeActiveRenders();
+//             $(this).addClass('active');
+//             $('.circle-container').fadeOut();
+//             $('.section-indicator').removeClass('second third fourth')
+//             $('.section-indicator').addClass('first');
+//             $('.color').fadeOut(function(){
+//                 $('.color').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//                 $('.gray').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//             });
+//             $('.color').fadeIn(); 
+//             $('.circle-container').fadeIn();
 
-        }
-    });
+//         }
+//     });
 
-    $('#btn-render-2').on('click', function (){
-        if(!$(this).hasClass('active')){
-            removeActiveRenders();
-            $(this).addClass('active');
-            $('.circle-container').fadeOut();
-            $('.section-indicator').removeClass('first third fourth')
-            $('.section-indicator').addClass('second');
-            $('.color').fadeOut(function(){
-                $('.color').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-                $('.gray').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-            });
-            $('.color').fadeIn(); 
-            $('.circle-container').fadeIn();
+//     $('#btn-render-2').on('click', function (){
+//         if(!$(this).hasClass('active')){
+//             removeActiveRenders();
+//             $(this).addClass('active');
+//             $('.circle-container').fadeOut();
+//             $('.section-indicator').removeClass('first third fourth')
+//             $('.section-indicator').addClass('second');
+//             $('.color').fadeOut(function(){
+//                 $('.color').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//                 $('.gray').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//             });
+//             $('.color').fadeIn(); 
+//             $('.circle-container').fadeIn();
 
-        }
-    });
+//         }
+//     });
 
-    $('#btn-render-3').on('click', function (){
-        if(!$(this).hasClass('active')){
-            removeActiveRenders();
-            $(this).addClass('active');
-            $('.circle-container').fadeOut();
-            $('.section-indicator').removeClass('first second fourth')
-            $(".section-indicator").addClass("third");
-            $('.color').fadeOut(function(){
-                $('.color').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-                $('.gray').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-            });
-            $('.color').fadeIn(); 
-            $('.circle-container').fadeIn();
-        }
-    });
+//     $('#btn-render-3').on('click', function (){
+//         if(!$(this).hasClass('active')){
+//             removeActiveRenders();
+//             $(this).addClass('active');
+//             $('.circle-container').fadeOut();
+//             $('.section-indicator').removeClass('first second fourth')
+//             $(".section-indicator").addClass("third");
+//             $('.color').fadeOut(function(){
+//                 $('.color').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//                 $('.gray').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//             });
+//             $('.color').fadeIn(); 
+//             $('.circle-container').fadeIn();
+//         }
+//     });
 
-    $('#btn-render-4').on('click', function () {
-        if(!$(this).hasClass('active')){
-            removeActiveRenders();
-            $(this).addClass('active');
-            $('.circle-container').fadeOut();
-            $('.section-indicator').removeClass('first second third')
-            $(".section-indicator").addClass("fourth");
-            $('.color').fadeOut(function(){
-                $('.color').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-                $('.gray').each(function(index){
-                    $(this).attr('src',`/assets/img/render1.jpg`);
-                })
-            });
-            $('.color').fadeIn(); 
-            $('.circle-container').fadeIn();
-        }
-    })
+//     $('#btn-render-4').on('click', function () {
+//         if(!$(this).hasClass('active')){
+//             removeActiveRenders();
+//             $(this).addClass('active');
+//             $('.circle-container').fadeOut();
+//             $('.section-indicator').removeClass('first second third')
+//             $(".section-indicator").addClass("fourth");
+//             $('.color').fadeOut(function(){
+//                 $('.color').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//                 $('.gray').each(function(index){
+//                     $(this).attr('src',`/assets/img/render1.jpg`);
+//                 })
+//             });
+//             $('.color').fadeIn(); 
+//             $('.circle-container').fadeIn();
+//         }
+//     })
 
 
-    // Click in get button for each product
-    $('.btn-get-product').each(function(index){
-        $(this).on('click',function(){
-            const carouselIndicators = $('.modal-indicators');
-            const myCarouselElement = $('#carousel-more-product');
-            const carouselProductsImages = $('.more-product-inner');
+//     // Click in get button for each product
+//     $('.btn-get-product').each(function(index){
+//         $(this).on('click',function(){
+//             const carouselIndicators = $('.modal-indicators');
+//             const myCarouselElement = $('#carousel-more-product');
+//             const carouselProductsImages = $('.more-product-inner');
 
-            // Get the product name as it is
-            const productName = $(this).closest('.product-info').find('h3').text();
-            const imageName = $(this).attr('data-product');
-            // Separate the product name words by - to use it in images src
-            const product = imageName.replace(new RegExp(' ','g'),'-');
+//             // Get the product name as it is
+//             const productName = $(this).closest('.product-info').find('h3').text();
+//             const imageName = $(this).attr('data-product');
+//             // Separate the product name words by - to use it in images src
+//             const product = imageName.replace(new RegExp(' ','g'),'-');
             
-            //Set the carousel back to position 0 when reopening the modal
-            const carousel = new bootstrap.Carousel(myCarouselElement).to(0);
-            $(carouselIndicators).empty();
-            const imagesQty = parseInt($(this).attr('data-bs-images'));
+//             //Set the carousel back to position 0 when reopening the modal
+//             const carousel = new bootstrap.Carousel(myCarouselElement).to(0);
+//             $(carouselIndicators).empty();
+//             const imagesQty = parseInt($(this).attr('data-bs-images'));
 
-            // Take the value of data-bs-images in each product, the value must be an integer
-            // this will create X number of buttons for each image of the product (data-bs-images)
-            for(let i = 0; i< imagesQty; i++){
-                const newButton = `<button class="${i===0 ? 'active' : '' }" aria-current="${i===0?true:false}" type="button" data-bs-target="#carousel-more-product" data-bs-slide-to="${i}" aria-label="Slide ${i+1}"></button>`;
+//             // Take the value of data-bs-images in each product, the value must be an integer
+//             // this will create X number of buttons for each image of the product (data-bs-images)
+//             for(let i = 0; i< imagesQty; i++){
+//                 const newButton = `<button class="${i===0 ? 'active' : '' }" aria-current="${i===0?true:false}" type="button" data-bs-target="#carousel-more-product" data-bs-slide-to="${i}" aria-label="Slide ${i+1}"></button>`;
                 
-                $(carouselIndicators).append(newButton);
+//                 $(carouselIndicators).append(newButton);
 
-            }
+//             }
 
-            //Generate images
-            $(carouselProductsImages).empty();
-            for(let i = 0; i<imagesQty; i++){
-                $(carouselProductsImages).append(`
-                <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                    <img src="/assets/img/products/${product}-0${i+1}.png" class="d-block more-product-img" alt="...">
-                </div>`)
-            }
-            // $('.more-product-img').each(function(index, element){
-            //     // Image's name must match the data-bs-product attribute
-            //     // ex: data-bs-product: Cilindro superficial / image name: cilindro-superficial-01
-            //     $(this).attr('src',`/assets/img/products/${product}-0${index+1}.png`);
-            // })
-            $('#formInfoProduct').val( productName);
+//             //Generate images
+//             $(carouselProductsImages).empty();
+//             for(let i = 0; i<imagesQty; i++){
+//                 $(carouselProductsImages).append(`
+//                 <div class="carousel-item ${i === 0 ? 'active' : ''}">
+//                     <img src="/assets/img/products/${product}-0${i+1}.png" class="d-block more-product-img" alt="...">
+//                 </div>`)
+//             }
+//             // $('.more-product-img').each(function(index, element){
+//             //     // Image's name must match the data-bs-product attribute
+//             //     // ex: data-bs-product: Cilindro superficial / image name: cilindro-superficial-01
+//             //     $(this).attr('src',`/assets/img/products/${product}-0${index+1}.png`);
+//             // })
+//             $('#formInfoProduct').val( productName);
             
-        })
-    })
+//         })
+//     })
 
-    function checkName(e){
-        var c = this.selectionStart,
-            r = /[^a-z ]/gi,
-            v = $(this).val();
-        if(r.test(v)) {
-            $(this).val(v.replace(r, ''));
-            c--;
-        }
-        this.setSelectionRange(c, c);
-        console.log(e.which);
-    } 
+//     function checkName(e){
+//         var c = this.selectionStart,
+//             r = /[^a-z ]/gi,
+//             v = $(this).val();
+//         if(r.test(v)) {
+//             $(this).val(v.replace(r, ''));
+//             c--;
+//         }
+//         this.setSelectionRange(c, c);
+//         console.log(e.which);
+//     } 
 
-    function checkPhone(e){
-        var c = this.selectionStart,
-        r = /[^+0-9 -]/gi,
-        v = $(this).val();
-    if(r.test(v)) {
-        $(this).val(v.replace(r, ''));
-        c--;
-    }
-    this.setSelectionRange(c, c);
-    console.log(e.which);
-    }
+//     function checkPhone(e){
+//         var c = this.selectionStart,
+//         r = /[^+0-9 -]/gi,
+//         v = $(this).val();
+//     if(r.test(v)) {
+//         $(this).val(v.replace(r, ''));
+//         c--;
+//     }
+//     this.setSelectionRange(c, c);
+//     console.log(e.which);
+//     }
 
-    function checkEmail(e){
-        var c = this.selectionStart,
-            r = /[^a-z0-9.@_]/gi,
-            v = $(this).val();
-        if(r.test(v)) {
-            $(this).val(v.replace(r, ''));
-            c--;
-        }
-        this.setSelectionRange(c, c);
-        console.log(e.which);
-    }
+//     function checkEmail(e){
+//         var c = this.selectionStart,
+//             r = /[^a-z0-9.@_]/gi,
+//             v = $(this).val();
+//         if(r.test(v)) {
+//             $(this).val(v.replace(r, ''));
+//             c--;
+//         }
+//         this.setSelectionRange(c, c);
+//         console.log(e.which);
+//     }
 
-    $('#contact-input-1').on('input',checkName);
+//     $('#contact-input-1').on('input',checkName);
 
-    $('#contact-input-2').on('input',checkName);
+//     $('#contact-input-2').on('input',checkName);
 
-    $('#contact-input-3').on('input',checkPhone);
+//     $('#contact-input-3').on('input',checkPhone);
 
-    $('#contact-input-4').on('input',checkEmail);
-
-
-    // CONTACT MODAL FOR PRODUCTS
-    $('#formInfoName').on('input', checkName);
+//     $('#contact-input-4').on('input',checkEmail);
 
 
-    $('#formInfoPhone').on('input', checkPhone);
+//     // CONTACT MODAL FOR PRODUCTS
+//     $('#formInfoName').on('input', checkName);
 
-    $('#formInfoEmail').on('input', checkEmail);
+
+//     $('#formInfoPhone').on('input', checkPhone);
+
+//     $('#formInfoEmail').on('input', checkEmail);
     
-})
+// })
