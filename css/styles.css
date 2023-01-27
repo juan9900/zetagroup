@@ -196,10 +196,23 @@ body {
   opacity: 0;
 } */
 
-.carousel-control-prev,
-.carousel-control-next {
+#welcomeCarousel .carousel-control-prev,
+#welcomeCarousel .carousel-control-next {
   z-index: 3;
 }
+
+#welcomeCarousel .carousel-item {
+  height: 100vh;
+}
+
+#welcomeCarousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* #welcomeCarousel .carousel-inner img {
+
+} */
 
 .language-selector-container {
   z-index: 99999;
