@@ -375,7 +375,6 @@ body {
   top: 80%;
 }
 
-
 .project-img {
   width: 100%;
   right: 0;
@@ -895,7 +894,8 @@ img.gray {
   right: 5%;
 }
 
-.steps-container {}
+.steps-container {
+}
 
 .rows-container {
   background-color: var(--primary);
@@ -904,7 +904,7 @@ img.gray {
   margin: 0 auto;
 }
 
-.steps-container>.steps-row {
+.steps-container > .steps-row {
   margin-bottom: 5rem;
   padding: 0 4rem;
 }
@@ -1099,7 +1099,7 @@ input[type="radio"] {
   overflow-y: scroll;
 }
 
-.options-container.active+.selected::after {
+.options-container.active + .selected::after {
   transform: rotateX(180deg);
 }
 
@@ -1233,7 +1233,7 @@ input[type="radio"] {
   left: 0;
 }
 
-.nav-container.nav-visible+.hamburger-container span {
+.nav-container.nav-visible + .hamburger-container span {
   color: red;
 }
 
@@ -1387,7 +1387,7 @@ footer {
   }
 
   .project-section-indicator {
-    width: 25%;
+    width: 20%;
     height: 3px;
     background: var(--primary);
     position: absolute;
@@ -1440,7 +1440,7 @@ footer {
     padding-bottom: 3rem;
   }
 
-  .section-about>.container {
+  .section-about > .container {
     padding: 0 2rem;
   }
 
@@ -1509,7 +1509,8 @@ footer {
     height: 2.5rem;
   }
 
-  .project.visible-vh {}
+  .project.visible-vh {
+  }
 
   /* .eye-logo {
     width: 100%;
@@ -1519,7 +1520,8 @@ footer {
     mask: url("../assets/img/ojito.svg") no-repeat center;
   } */
 
-  .btn-show-project img {}
+  .btn-show-project img {
+  }
 
   .project-place {
     font-size: 1.8em;
@@ -1659,7 +1661,6 @@ footer {
     width: 80%;
   }
 
-
   .section-steps h2 {
     position: static;
     margin: 0;
@@ -1669,7 +1670,7 @@ footer {
     -webkit-margin-after: -2px;
   }
 
-  .steps-container>.steps-row {
+  .steps-container > .steps-row {
     margin-bottom: 0;
     margin: 0 auto;
     padding-top: 2rem;
@@ -1741,7 +1742,8 @@ footer {
     height: 30rem;
   }
 
-  .socials-list {}
+  .socials-list {
+  }
 
   .contact-info li {
     font-size: 1.4em;
@@ -1918,7 +1920,7 @@ footer {
     margin-left: 15%;
   }
 
-  .section-quotation>div {
+  .section-quotation > div {
     width: 87%;
   }
 
@@ -1983,7 +1985,6 @@ footer {
 }
 
 @media screen and (max-width: 350px) {
-
   .project-button,
   .renders-list li {
     font-size: 0.98em;
@@ -1996,7 +1997,6 @@ footer {
     width: 55%;
   }
 }
-
 
 .floating-flecha {
   position: fixed;
